@@ -80,13 +80,6 @@ if(rsvpForm) {
         // 2. Tu número de teléfono (Lada + número, sin +, sin espacios)
         const telefono = "526671312162"; // <-- ¡RECUERDA CAMBIAR ESTO POR TU NÚMERO!
 
-        console.log("2. Valores extraídos de los campos:");
-        console.log("- Nombre:", nombre);
-        console.log("- Asistencia:", asistencia);
-        console.log("- Personas:", personas);
-        console.log("- Mensaje:", mensaje);
-        return;
-
         // 3. Armar el texto para WhatsApp
         let texto = `¡Hola! Quiero confirmar mi asistencia a su boda. 💍✨%0A%0A`;
         texto += `*Nombre:* ${nombre}%0A`;

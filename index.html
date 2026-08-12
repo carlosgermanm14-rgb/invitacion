@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Aida y Geovanny</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes: Cormorant (Nombres), Montserrat (Textos pequeños), Tangerine (Caligrafía fina) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================== SOBRE DE LUJO ================== -->
+    <div id="envelope-wrapper">
+        <div class="envelope">
+            <div class="env-back"></div>
+            <div class="env-left"></div>
+            <div class="env-right"></div>
+            <div class="env-bottom"></div>
+            <div class="env-top-wrapper">
+                <div class="env-top"></div>
+                
+                <!-- Tu nuevo Sello de Lacre Realista -->
+                <img src="img/logo.svg" alt="Sello de los novios" class="wax-seal-img">
+                
+            </div>
+        </div>
+        <div class="env-content">
+            <p class="swipe-text">Toca para abrir</p>
+            <svg class="swipe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ================== PORTADA (SAVE THE DATE STYLE) ================== -->
+    <section class="hero-fine-art">
+        
+        <!-- Flores SVG (Esquina superior izquierda) -->
+        <svg class="floral-svg top-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 Q30,20 50,50 T90,80" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <path d="M20,10 Q40,5 50,20 Q30,25 20,10" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <path d="M10,30 Q25,40 20,55 Q5,45 10,30" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="3" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <circle cx="90" cy="80" r="2" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+        </svg>
+
+        <!-- Calendario -->
+        <div class="calendar-section">
+            <h3 class="month-title">ENERO</h3>
+            <div class="calendar-grid">
+                <span class="day-name">Dom</span><span class="day-name">Lun</span><span class="day-name">Mar</span>
+                <span class="day-name">Mie</span><span class="day-name">Jue</span><span class="day-name">Vie</span><span class="day-name">Sab</span>
+                
+                <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+                <span class="heart-date">23<div class="dotted-line"></div></span>
+            </div>
+        </div>
+
+        <!-- Textos Centrales -->
+        <div class="hero-text-container">
+            <h2 class="script-title">Nuestra Boda</h2>
+            <p class="subtitle">CELEBRA CON NOSOTROS</p>
+            
+            <h1 class="couple-names">AIDA & GEOVANNY</h1>
+            <p class="full-date">SÁBADO, ENERO 23, 2027</p>
+        </div>
+
+        <!-- Flores SVG (Esquina inferior derecha) -->
+        <svg class="floral-svg bottom-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,100 Q70,80 50,50 T10,20" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <path d="M80,90 Q60,95 50,80 Q70,75 80,90" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <path d="M90,70 Q75,60 80,45 Q95,55 90,70" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="3" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+            <circle cx="10" cy="20" r="2" fill="none" stroke="var(--azul-tinta)" stroke-width="0.5"/>
+        </svg>
+
+        <div class="scroll-indicator">
+            <svg class="swipe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--azul-tinta)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ================== CONTADOR Y CALENDARIO ================== -->
+    <section class="countdown-section center-text">
+        <p class="section-subtitle">FALTAN</p>
+        <div id="countdown">
+            <div class="time-box"><span id="days">00</span><p>Días</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Hrs</p></div>
+            <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+            <div class="time-box"><span id="seconds">00</span><p>Seg</p></div>
+        </div>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Aida+y+Geovanny&dates=20270123T190000Z/20270124T050000Z&details=¡Nos+casamos!&location=Culiacán,+Sin." target="_blank" class="btn btn-outline">
+            Agendar en Calendario
+        </a>
+    </section>
+
+    <!-- ================== UBICACIONES ================== -->
+    <section class="locations-section">
+        <div class="cards-container">
+            <!-- Ceremonia -->
+            <div class="info-card">
+                <h3 class="card-title">CEREMONIA</h3>
+                <p class="card-time">1:00 PM</p>
+                <p class="card-place">Parroquia de San Gabriel</p>
+                <p class="card-address">Gabriel Leyva, Desarrollo Urbano Tres Ríos<br>CLN, SIN.</p>
+                <a href="https://maps.app.goo.gl/qvSA5Q57EZXgRRtS9" target="_blank" class="btn btn-outline">Ver Mapa</a>
+            </div>
+            
+            <!-- Recepción -->
+            <div class="info-card">
+                <h3 class="card-title">RECEPCIÓN</h3>
+                <p class="card-time">5:00 PM</p>
+                <p class="card-place">Vía real Salón y Jardín</p>
+                <p class="card-address">Aztlán 4086, Centenario<br>CLN, SIN.</p>
+                <a href="https://maps.app.goo.gl/9F6c42STHqhk9WJLA" target="_blank" class="btn btn-outline">Ver Mapa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== DETALLES ================== -->
+    <section class="details-section">
+        <div class="cards-container">
+            <!-- Dress Code -->
+            <div class="info-card">
+                <h3 class="card-title">CÓDIGO DE VESTIMENTA</h3>
+                <p class="card-accent">Formal / Etiqueta</p>
+                <p class="card-address">Nos encantaría verlos lucir hermosos.<br>Por favor, eviten el color blanco y azul.</p>
+            </div>
+
+            <!-- Mesa de Regalos -->
+            <div class="info-card">
+                <h3 class="card-title">MESA DE REGALOS</h3>
+                <p class="card-address">Su presencia es nuestro mejor regalo,<br>pero si desean tener un detalle:</p>
+                <p class="card-accent mt-1">Liverpool: #12345678</p>
+                
+                <p class="card-title mt-2">TRANSFERENCIA</p>
+                <p class="card-address">BANAMEX<br>Cuenta: 012 345 6789<br>CLABE: 0123 4567 8910 1112 13<br>Aida Maria Lopez Ruiz</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== RSVP ================== -->
+    <section class="rsvp-section center-text">
+        <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
+        <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>15 de Diciembre de 2026</strong></p>
+        
+        <form id="rsvp-form" class="rsvp-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <select required>
+                <option value="" disabled selected>¿Asistirás?</option>
+                <option value="si">¡Sí, ahí estaré!</option>
+                <option value="no">Lamentablemente no podré</option>
+            </select>
+            <input type="number" placeholder="No. de personas" min="1" max="5">
+            <textarea placeholder="Mensaje para los novios o restricciones" rows="2"></textarea>
+            <button type="submit" class="btn btn-solid">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer-section">
+        <p>¡Esperamos celebrar este gran día con ustedes!</p>
+        <h2 class="footer-names">Aida & Geovanny</h2>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

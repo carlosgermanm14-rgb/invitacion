@@ -90,16 +90,12 @@ if(rsvpForm) {
         let texto = `¡Hola! Quiero confirmar mi asistencia a su boda. 💍✨%0A%0A`;
         texto += `*Nombre:* ${nombre}%0A`;
         texto += `*Asistencia:* ${asistencia}%0A`;
-        
-        if (personas) {
-            texto += `*No. de personas:* ${personas}%0A`;
-        }
-        if (mensaje) {
-            texto += `*Mensaje:* ${mensaje}%0A`;
-        }
+        texto += `*No. de personas:* ${personas}%0A`;
+        texto += `*Mensaje:* ${mensaje}%0A`;
 
-        // 4. Crear el link
-        whatsappUrl = `https://wa.me/${telefono}?text=${texto}`;
+        const textoCodificado = encodeURIComponent(texto);
+
+        whatsappUrl = `https://wa.me/${telefono}?text=${textoCodificado}`;
 
         // 5. Mostrar la ventana bonita (Modal)
         if(rsvpModal) {

@@ -63,47 +63,56 @@ const timer = setInterval(function() {
 // --- FORMULARIO RSVP ---
 document.getElementById('rsvp-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('¡Gracias! Tu confirmación ha sido registrada.');
     this.reset();
 });
 
-// ================== ENVIAR RSVP A WHATSAPP ==================
 // ================== ENVIAR RSVP A WHATSAPP Y MODAL ==================
 const rsvpForm = document.getElementById('rsvp-form');
 const rsvpModal = document.getElementById('rsvp-modal');
 const closeModalBtn = document.getElementById('close-modal-btn');
-let whatsappUrl = ""; // Variable para guardar el link
+let whatsappUrl = ""; 
 
 if(rsvpForm) {
-    rsvpForm.addEventListener('submit', function(event) {
-        event.preventDefault(); 
+    // Usamos onsubmit para sobreescribir CUALQUIER función vieja que se haya quedado pegada
+    rsvpForm.onsubmit = function(event) {
+        event.preventDefault(); // Bloquea la recarga de página y los alerts antiguos
 
+        // 1. Extraer los datos exactos que escribió el invitado
         const nombre = document.getElementById('rsvp-nombre').value;
         const asistencia = document.getElementById('rsvp-asistencia').value;
         const personas = document.getElementById('rsvp-personas').value;
         const mensaje = document.getElementById('rsvp-mensaje').value;
 
-        // TU NÚMERO
-        const telefono = "526671312162"; // <-- ¡CAMBIA ESTO!
+        // 2. Tu número de teléfono (Lada + número, sin +, sin espacios)
+        const telefono = "526671234567"; // <-- ¡RECUERDA CAMBIAR ESTO POR TU NÚMERO!
 
+        // 3. Armar el texto para WhatsApp
         let texto = `¡Hola! Quiero confirmar mi asistencia a su boda. 💍✨%0A%0A`;
         texto += `*Nombre:* ${nombre}%0A`;
         texto += `*Asistencia:* ${asistencia}%0A`;
-        if (personas) texto += `*No. de personas:* ${personas}%0A`;
-        if (mensaje) texto += `*Mensaje:* ${mensaje}%0A`;
+        
+        if (personas) {
+            texto += `*No. de personas:* ${personas}%0A`;
+        }
+        if (mensaje) {
+            texto += `*Mensaje:* ${mensaje}%0A`;
+        }
 
+        // 4. Crear el link
         whatsappUrl = `https://wa.me/${telefono}?text=${texto}`;
 
-        // Mostrar el modal elegante en lugar del alert feo
-        rsvpModal.classList.add('show');
-    });
+        // 5. Mostrar la ventana bonita (Modal)
+        if(rsvpModal) {
+            rsvpModal.classList.add('show');
+        }
+    };
 }
 
-// Cuando hagan clic en "CONTINUAR" en el cuadro bonito, se abre WhatsApp y se cierra el cuadro
+// 6. Al presionar "CONTINUAR" en la ventana bonita
 if(closeModalBtn) {
     closeModalBtn.addEventListener('click', function() {
-        window.open(whatsappUrl, '_blank');
-        rsvpModal.classList.remove('show');
-        rsvpForm.reset(); // Limpia el formulario
+        window.open(whatsappUrl, '_blank'); // Abre WhatsApp con los datos
+        rsvpModal.classList.remove('show'); // Cierra la ventana
+        rsvpForm.reset(); // Limpia el formulario para que quede en blanco de nuevo
     });
 }

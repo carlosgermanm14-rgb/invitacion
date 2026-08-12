@@ -84,7 +84,7 @@ if(rsvpForm) {
         const mensaje = document.getElementById('rsvp-mensaje').value;
 
         // 2. Tu número de teléfono (Lada + número, sin +, sin espacios)
-        const telefono = "526671234567"; // <-- ¡RECUERDA CAMBIAR ESTO POR TU NÚMERO!
+        const telefono = "526671312162"; // <-- ¡RECUERDA CAMBIAR ESTO POR TU NÚMERO!
 
         // 3. Armar el texto para WhatsApp
         let texto = `¡Hola! Quiero confirmar mi asistencia a su boda. 💍✨%0A%0A`;

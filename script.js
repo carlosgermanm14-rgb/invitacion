@@ -66,3 +66,39 @@ document.getElementById('rsvp-form').addEventListener('submit', function(e) {
     alert('¡Gracias! Tu confirmación ha sido registrada.');
     this.reset();
 });
+
+// ================== ENVIAR RSVP A WHATSAPP ==================
+const rsvpForm = document.getElementById('rsvp-form');
+
+if(rsvpForm) {
+    rsvpForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que la página se recargue al enviar
+
+        // 1. Obtener los valores de los campos
+        const nombre = document.getElementById('rsvp-nombre').value;
+        const asistencia = document.getElementById('rsvp-asistencia').value;
+        const personas = document.getElementById('rsvp-personas').value;
+        const mensaje = document.getElementById('rsvp-mensaje').value;
+
+        // 2. Tu número de WhatsApp (Código de país + número, sin signos ni espacios)
+        // Ejemplo para México (52) + número (6671234567)
+        const telefono = "526671312162"; // <-- ¡CAMBIA ESTO POR TU NÚMERO!
+
+        // 3. Armar el mensaje con formato (Las * hacen el texto negrita en WhatsApp)
+        let texto = `¡Hola! Quiero confirmar mi asistencia a su boda. 💍✨%0A%0A`;
+        texto += `*Nombre:* ${nombre}%0A`;
+        texto += `*Asistencia:* ${asistencia}%0A`;
+        
+        if (personas) {
+            texto += `*No. de personas:* ${personas}%0A`;
+        }
+        
+        if (mensaje) {
+            texto += `*Mensaje:* ${mensaje}%0A`;
+        }
+
+        // 4. Crear el enlace final y abrirlo
+        const url = `https://wa.me/${telefono}?text=${texto}`;
+        window.open(url, '_blank');
+    });
+}

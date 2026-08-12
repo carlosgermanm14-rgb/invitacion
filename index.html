@@ -27,22 +27,34 @@
 
     <!-- ================== SOBRE DE LUJO ================== -->
     <div id="envelope-wrapper">
-        <div class="envelope">
+        
+        <!-- Textos Superiores -->
+        <div class="env-header">
+            <p class="env-pre-title">Nos Casamos</p>
+            <h1 class="env-names">Aida <span class="env-amp">&</span> Geovanny</h1>
+            <p class="env-date">23 . ENERO . 2027</p>
+        </div>
+
+        <!-- El Sobre -->
+        <div class="envelope" id="envelope-element">
             <div class="env-back"></div>
             <div class="env-left"></div>
             <div class="env-right"></div>
             <div class="env-bottom"></div>
             <div class="env-top-wrapper">
                 <div class="env-top"></div>
-                
-                <!-- Tu nuevo Sello de Lacre Realista -->
+                <!-- Sello de Lacre -->
                 <img src="img/logo.svg" alt="Sello de los novios" class="wax-seal-img">
-                
             </div>
         </div>
-        <div class="env-content">
-            <p class="swipe-text">Toca para abrir</p>
-            <svg class="swipe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        
+        <!-- Botón, Instrucción y Flecha -->
+        <div class="env-footer">
+            
+            <p class="env-instruction">TOCA EL SOBRE PARA ABRIR</p>
+            
+            <!-- Flecha hacia arriba -->
+            <svg class="swipe-icon-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
         </div>
@@ -132,20 +144,48 @@
     </section>
 
     <!-- ================== DETALLES ================== -->
-    <section class="details-section">
+     <section class="details-section">
         <div class="cards-container">
             <!-- Dress Code -->
-            <div class="info-card">
-                <h3 class="card-title">CÓDIGO DE VESTIMENTA</h3>
-                <p class="card-accent">Formal / Etiqueta</p>
-                <p class="card-address">Nos encantaría verlos lucir hermosos.<br>Por favor, eviten el color blanco y azul.</p>
-            </div>
+            <div class="info-card-solid dress-code-card">
+                <p class="card-pre-title">CÓDIGO DE VESTIMENTA</p>
+                <h3 class="card-title">Formal</h3>
+                <p class="card-address mb-2">Nos encantaría verlos lucir espectaculares.<br>Para mantener la armonía de nuestro evento, les pedimos considerar lo siguiente:</p>
+                
+                <div class="dress-code-details">
+                    <!-- Mujeres -->
+                    <div class="dc-gender">
+                        <i class="fa-solid fa-person-dress dc-icon"></i>
+                        <h4 class="dc-title">MUJERES</h4>
+                        
+                        <div class="dc-reserved">
+                            <span class="dc-circle reserved-white"></span>
+                            <p>Por favor, <strong>reserva el color blanco</strong> y tonos perlados para la novia.</p>
+                        </div>
+                    </div>
 
+                    <!-- Hombres -->
+                    <div class="dc-gender">
+                        <i class="fa-solid fa-user-tie dc-icon"></i>
+                        <h4 class="dc-title">HOMBRES</h4>
+                        
+                        <div class="dc-reserved">
+                            <span class="dc-circle reserved-blue"></span>
+                            <p>Por favor, <strong>reserva el azul noche</strong> para el novio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="details-section">
+        <div class="cards-container">
             <!-- Mesa de Regalos -->
             <div class="info-card">
                 <h3 class="card-title">MESA DE REGALOS</h3>
-                <p class="card-address">Su presencia es nuestro mejor regalo,<br>pero si desean tener un detalle:</p>
-                <p class="card-accent mt-1">Liverpool: #12345678</p>
+                <p class="card-address">El regalo más grande que podemos recibir es contar con su presencia en el inicio de esta nueva etapa. Sin embargo, si naciera de su corazón realizarnos un obsequio, ponemos a su disposición un buzón de sobres el día del evento para ayudarnos a construir nuestros sueños juntos.
+                    Así mismo una transferencia a la cuenta proporcionada.
+                </p>
                 
                 <p class="card-title mt-2">TRANSFERENCIA</p>
                 <p class="card-address">BANAMEX<br>Cuenta: 012 345 6789<br>CLABE: 0123 4567 8910 1112 13<br>Aida Maria Lopez Ruiz</p>
@@ -154,21 +194,26 @@
     </section>
 
     <!-- ================== RSVP ================== -->
-    <section class="rsvp-section center-text">
-        <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
-        <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>15 de Diciembre de 2026</strong></p>
+<section class="rsvp-section center-text">
+    <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
+    <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>15 de Diciembre de 2026</strong></p>
+    
+    <form id="rsvp-form" class="rsvp-form">
+        <!-- Agregamos IDs a todos los campos -->
+        <input type="text" id="rsvp-nombre" placeholder="Nombre completo" required>
         
-        <form id="rsvp-form" class="rsvp-form">
-            <input type="text" placeholder="Nombre completo" required>
-            <select required>
-                <option value="" disabled selected>¿Asistirás?</option>
-                <option value="si">¡Sí, ahí estaré!</option>
-                <option value="no">Lamentablemente no podré</option>
-            </select>
-            <input type="number" placeholder="No. de personas" min="1" max="5">
-            <textarea placeholder="Mensaje para los novios o restricciones" rows="2"></textarea>
-            <button type="submit" class="btn btn-solid">Enviar</button>
-        </form>
+        <select id="rsvp-asistencia" required>
+            <option value="" disabled selected>¿Asistirás?</option>
+            <option value="Sí asistiré">¡Sí, ahí estaré!</option>
+            <option value="No asistiré">Lamentablemente no podré</option>
+        </select>
+        
+        <input type="number" id="rsvp-personas" placeholder="No. de personas (Ej. 2)" min="1" max="5">
+        
+        <textarea id="rsvp-mensaje" placeholder="Mensaje para los novios o restricciones (Opcional)" rows="2"></textarea>
+        
+        <button type="submit" class="btn btn-solid">ENVIAR</button>
+    </form>
     </section>
 
     <footer class="footer-section">

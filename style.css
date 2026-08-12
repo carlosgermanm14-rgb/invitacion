@@ -21,87 +21,111 @@ body {
     overflow-x: hidden;
 }
 
-/* ================== SOBRE DE LUJO (ADAPTADO AL TEMA) ================== */
+/* ================== SOBRE DE LUJO (DISEÑO EDITORIAL & ESCRITORIO) ================== */
 #envelope-wrapper {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle, #ffffff 0%, #ebe7de 100%); 
+    background: var(--fondo-crema); 
     z-index: 9999;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     transition: transform 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.6s, opacity 1s ease 0.6s;
+    padding: 20px;
 }
 
+/* Textos Superiores */
+.env-header { text-align: center; margin-bottom: 35px; }
+.env-pre-title { font-family: var(--fuente-textos); font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: var(--texto-gris); margin-bottom: 15px; }
+.env-names { font-family: var(--fuente-caligrafia); font-size: 4rem; color: var(--azul-tinta); font-weight: 400; line-height: 1; margin-bottom: 15px; }
+.env-amp { font-family: var(--fuente-nombres); font-size: 2rem; font-style: italic; color: var(--azul-tinta); margin: 0 5px; }
+.env-date { font-family: var(--fuente-textos); font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: var(--texto-oscuro); font-weight: 600; }
+
+/* ================== EL SOBRE (ESTILO REFERENCIA DE ALTA COSTURA) ================== */
 .envelope {
-    position: relative; width: 340px; height: 230px; cursor: pointer;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
-    border-radius: 4px; background: transparent;
+    position: relative; 
+    width: 85vw; /* En celular tomará el 90% de la pantalla */
+    max-width: 420px; /* EN COMPUTADORA NUNCA PASARÁ DE ESTE TAMAÑO */
+    height: 55vw; 
+    max-height: 260px; /* EN COMPUTADORA SE BLOQUEA EN ESTA ALTURA */
+    margin: 0 auto; /* Lo mantiene perfectamente en el centro */
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04);
+    border-radius: 6px; 
+    background: transparent;
 }
 
-.env-back { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #e8e5dc; border-radius: 4px; }
-.env-left, .env-right, .env-bottom { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 4px; }
-.env-left { background: #fdfbf7; clip-path: polygon(0 0, 52% 52%, 0 100%); }
-.env-right { background: #fdfbf7; clip-path: polygon(100% 0, 48% 52%, 100% 100%); }
-.env-bottom { background: #ffffff; clip-path: polygon(0 100%, 50% 50%, 100% 100%); filter: drop-shadow(0 -2px 3px rgba(0,0,0,0.04)); }
+/* Interior del sobre */
+.env-back { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background: #e8e5dc; 
+    border-radius: 6px; 
+}
 
+/* Solapas laterales e inferior (ligeramente más oscuras para dar profundidad) */
+.env-left, .env-right, .env-bottom { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    border-radius: 6px; 
+}
+
+.env-left { background: #fbfbfb; clip-path: polygon(0 0, 50% 50%, 0 100%); z-index: 1; }
+.env-right { background: #fbfbfb; clip-path: polygon(100% 0, 50% 50%, 100% 100%); z-index: 1; }
+.env-bottom { 
+    background: #ffffff; 
+    clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.03));
+    z-index: 2; 
+}
+
+/* Solapa Superior (Más grande y pronunciada como en la referencia) */
 .env-top-wrapper {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     transform-origin: top; transition: transform 0.6s ease-in-out;
-    z-index: 10; filter: drop-shadow(0 6px 8px rgba(0,0,0,0.08));
+    z-index: 10; 
+    /* Sombra muy realista que proyecta la solapa sobre el resto del sobre */
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12)); 
 }
-.env-top {
-    width: 100%; height: 100%; background: #ffffff;
-    clip-path: polygon(0 0, 100% 0, 50% 55%); border-radius: 4px 4px 0 0;
+.env-top { 
+    width: 100%; height: 100%; background: #ffffff; 
+    clip-path: polygon(-7% 0%, 107% 0, 50% 77%);
+    border-radius: 6px 6px 65px 66px;
 }
 
-/* ================== SELLO DE LACRE REALISTA (IMAGEN) ================== */
+/* ================== SELLO DE LACRE ================== */
 .wax-seal-img {
     position: absolute; 
-    top: 55%; 
+    top: 65%; /* Bajamos el sello para que coincida con la nueva punta de la solapa */
     left: 50%; 
     transform: translate(-50%, -50%);
-    width: 115px; /* Sello más grande y proporcionado */
-    height: auto;
+    width: 200px; /* Tamaño ajustado a la nueva proporción */
+    height: 200px; 
+    object-fit: contain;
     z-index: 15; 
     transition: opacity 0.3s;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.35)); /* Sombra para dar profundidad */
+    /* Sombra fuerte para el relieve del lacre */
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.35));
 }
 
-/* Modificamos la animación de apertura */
+/* Animación de apertura */
 #envelope-wrapper.open .env-top-wrapper { transform: rotateX(180deg); z-index: 1;}
 #envelope-wrapper.open .wax-seal-img { opacity: 0; }
 #envelope-wrapper.open { transform: translateY(-100vh); opacity: 0; }
 
-/* ================== INSTRUCCIONES Y FLECHA ================== */
-.env-content {
-    margin-top: 60px; /* Un poco más de separación del sobre */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 20;
-}
+/* ================== BOTÓN DE DOBLE BORDE Y FOOTER ================== */
+.env-footer { margin-top: 35px; text-align: center; display: flex; flex-direction: column; align-items: center; z-index: 20; width: 100%; }
 
-.swipe-text {
-    font-family: var(--fuente-nombres); /* Usamos la tipografía elegante (Cormorant) */
-    font-size: 1.5rem; /* Tamaño más estético */
-    font-style: italic;
-    letter-spacing: 2px;
-    color: var(--azul-tinta); /* Azul para combinar perfecto con tu sello */
-    margin-bottom: 12px;
-    font-weight: 500;
-}
+.env-instruction { font-family: var(--fuente-textos); font-size: 0.6rem; letter-spacing: 3px; color: var(--texto-gris); text-transform: uppercase; }
 
-.swipe-icon {
-    width: 24px; /* Flecha más pequeña y sutil */
+/* Flecha hacia arriba */
+.swipe-icon-up {
+    width: 24px;
     height: 24px;
+    margin-top: 15px;
     color: var(--azul-tinta);
-    animation: pointer-bounce 1.5s ease-in-out infinite; /* Animación de rebote */
+    animation: pointer-bounce 1.5s ease-in-out infinite;
 }
 
-/* Animación de la flecha de arriba a abajo */
 @keyframes pointer-bounce {
     0%, 100% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(-12px); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 1; }
 }
 
 /* ================== PORTADA (HERO FINE ART) ================== */
@@ -207,6 +231,7 @@ body {
 .mt-2 { margin-top: 1.5rem; }
 
 .countdown-section, .locations-section, .details-section, .rsvp-section {
+    border-top: 1px solid rgba(20, 55, 122, 0.1);
     padding: 4rem 1.5rem; background-color: var(--fondo-crema);
 }
 
@@ -244,6 +269,117 @@ body {
     background: transparent; font-family: var(--fuente-textos); font-size: 0.8rem; color: var(--texto-oscuro);
 }
 .rsvp-form input:focus, .rsvp-form select:focus, .rsvp-form textarea:focus { outline: none; border-color: var(--azul-tinta); }
+
+/* ================== CÓDIGO DE VESTIMENTA (ICONOS Y PALETAS) ================== */
+.dress-code-card {
+    max-width: 600px; /* Un poco más ancha para que quepan las dos columnas */
+}
+
+.dress-code-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+
+/* En pantallas más grandes (computadoras/tablets), se pone lado a lado */
+@media (min-width: 500px) {
+    .dress-code-details {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+}
+
+.dc-gender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.dc-icon {
+    font-size: 2.5rem;
+    color: var(--azul-tinta);
+    margin-bottom: 10px;
+}
+
+.dc-title {
+    font-family: var(--fuente-nombres);
+    font-size: 1.6rem;
+    color: var(--azul-tinta);
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.dc-desc {
+    font-family: var(--fuente-textos);
+    font-size: 0.85rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 20px;
+}
+
+/* Caja del color reservado */
+.dc-reserved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: var(--fondo-crema); /* Un fondo sutil para destacar la regla */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Círculos de color */
+.dc-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Línea diagonal tachando el color sutilmente */
+.dc-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 1.5px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.reserved-white {
+    background-color: #FFFFFF;
+    border: 1px solid #e0e0e0;
+}
+
+.reserved-blue {
+    background-color: #15336d; /* Azul noche profundísimo */
+    border: 1px solid #000000;
+}
+
+/* Texto de la restricción */
+.dc-reserved p {
+    font-family: var(--fuente-textos);
+    font-size: 0.75rem;
+    color: var(--texto-gris);
+    line-height: 1.5;
+    max-width: 180px;
+}
+
+.dc-reserved strong {
+    color: var(--azul-tinta);
+    font-weight: 500;
+}
 
 /* ================== BOTÓN DE MÚSICA FLOTANTE ================== */
 .music-btn {

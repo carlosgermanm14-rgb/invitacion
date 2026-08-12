@@ -1,7 +1,8 @@
 /* ================== VARIABLES DE COLOR Y FUENTES ================== */
 :root {
-    --fondo-crema: #fdfbf7; /* El tono crema clarito de tu imagen */
-    --azul-tinta: #14377a; /* El azul rey/marino característico del texto y flores */
+    /* Fondo crema ajustado para que coincida exactamente con tus imágenes */
+    --fondo-crema: #f4f1e9; 
+    --azul-tinta: #14377a; 
     --texto-oscuro: #222222;
     --texto-gris: #555555;
     
@@ -51,6 +52,7 @@ body {
     width: 100%; height: 100%; background: #ffffff;
     clip-path: polygon(0 0, 100% 0, 50% 55%); border-radius: 4px 4px 0 0;
 }
+
 /* ================== SELLO DE LACRE REALISTA (IMAGEN) ================== */
 .wax-seal-img {
     position: absolute; 
@@ -101,6 +103,7 @@ body {
     0%, 100% { transform: translateY(0); opacity: 0.5; }
     50% { transform: translateY(-12px); opacity: 1; }
 }
+
 /* ================== PORTADA (HERO FINE ART) ================== */
 .hero-fine-art {
     position: relative; width: 100%; min-height: 100vh;
@@ -108,13 +111,40 @@ body {
     padding: 2rem 1.5rem; background-color: var(--fondo-crema); overflow: hidden;
 }
 
-/* SVG Florales */
-.floral-svg { position: absolute; width: 150px; height: 150px; opacity: 0.85; }
-.floral-svg.top-left { top: 0; left: 0; }
-.floral-svg.bottom-right { bottom: 0; right: 0; }
+/* ================== IMÁGENES FLORALES (TAMAÑOS Y FONDOS CORREGIDOS) ================== */
+.floral-img {
+    position: absolute;
+    z-index: 1; 
+    pointer-events: none; 
+    /* Esto fusiona los bordes de la imagen con el nuevo fondo crema */
+    mix-blend-mode: darken; 
+    opacity: 0.95;
+}
+
+/* Flor superior izquierda (Más grande) */
+.floral-img.top-left {
+    top: -30px;
+    left: -15px;
+    width: 300px; /* Tamaño aumentado considerablemente */
+}
+
+/* Flor central derecha (Más grande) */
+.floral-img.mid-right {
+    top: 55%; 
+    right: -65px; 
+    width: 260px; /* Tamaño aumentado */
+    transform: translateY(-50%);
+}
+
+/* Flor inferior izquierda */
+.floral-img.bottom-left {
+    bottom: -40px; 
+    left: -20px; 
+    width: 230px; /* Ligeramente aumentada para equilibrar el peso visual */
+}
 
 /* Calendario Estilo Save The Date */
-.calendar-section { text-align: center; margin-bottom: 2rem; z-index: 2; }
+.calendar-section { position: relative; z-index: 2; text-align: center; margin-bottom: 2rem; }
 .month-title { font-family: var(--fuente-nombres); color: var(--azul-tinta); letter-spacing: 6px; font-weight: 500; margin-bottom: 1rem; font-size: 1.2rem; }
 .calendar-grid {
     display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px;
@@ -137,11 +167,35 @@ body {
     border-left: 1px dotted var(--azul-tinta); opacity: 0.6;
 }
 
-/* Textos Centrales */
-.hero-text-container { text-align: center; z-index: 2; margin-top: 3rem; }
+/* ================== TEXTOS CENTRALES Y NOMBRES ================== */
+.hero-text-container { 
+    text-align: center; 
+    z-index: 2; 
+    position: relative; /* Asegura que el texto quede por encima de las flores */
+    margin-top: 3rem; 
+}
 .script-title { font-family: var(--fuente-caligrafia); font-size: 4.5rem; color: var(--texto-oscuro); line-height: 1; margin-bottom: 2rem; font-weight: 400; }
-.subtitle { font-size: 0.7rem; letter-spacing: 4px; color: var(--texto-gris); margin-bottom: 1rem; }
-.couple-names { font-family: var(--fuente-nombres); font-size: 2.2rem; letter-spacing: 5px; color: var(--azul-tinta); font-weight: 500; line-height: 1.3; margin-bottom: 1rem; }
+.subtitle { font-size: 0.7rem; letter-spacing: 4px; color: var(--texto-gris); margin-bottom: 1.5rem; }
+
+/* Nombres en 3 líneas */
+.couple-names { 
+    font-family: var(--fuente-nombres); 
+    font-size: 2.2rem; 
+    letter-spacing: 5px; 
+    color: var(--azul-tinta); 
+    font-weight: 500; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 8px; /* Separación entre AIDA, el & y GEOVANNY */
+    margin-bottom: 1.5rem; 
+}
+
+.couple-names .ampersand {
+    font-size: 2rem;
+    line-height: 1;
+}
+
 .full-date { font-family: var(--fuente-textos); font-size: 0.75rem; letter-spacing: 3px; color: var(--texto-oscuro); }
 
 .scroll-indicator { position: absolute; bottom: 20px; animation: elegant-bounce 2s infinite; }

@@ -194,26 +194,26 @@
     </section>
 
     <!-- ================== RSVP ================== -->
-<section class="rsvp-section center-text">
-    <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
-    <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>15 de Diciembre de 2026</strong></p>
-    
-    <form id="rsvp-form" class="rsvp-form">
-        <!-- Agregamos IDs a todos los campos -->
-        <input type="text" id="rsvp-nombre" placeholder="Nombre completo" required>
+    <section class="rsvp-section center-text">
+        <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
+        <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>15 de Diciembre de 2026</strong></p>
         
-        <select id="rsvp-asistencia" required>
-            <option value="" disabled selected>¿Asistirás?</option>
-            <option value="Sí asistiré">¡Sí, ahí estaré!</option>
-            <option value="No asistiré">Lamentablemente no podré</option>
-        </select>
-        
-        <input type="number" id="rsvp-personas" placeholder="No. de personas (Ej. 2)" min="1" max="5">
-        
-        <textarea id="rsvp-mensaje" placeholder="Mensaje para los novios o restricciones (Opcional)" rows="2"></textarea>
-        
-        <button type="submit" class="btn btn-solid">ENVIAR</button>
-    </form>
+        <form id="rsvp-form" class="rsvp-form">
+            <!-- Agregamos IDs a todos los campos -->
+            <input type="text" id="rsvp-nombre" placeholder="Nombre completo" required>
+            
+            <select id="rsvp-asistencia" required>
+                <option value="" disabled selected>¿Asistirás?</option>
+                <option value="Sí asistiré">¡Sí, ahí estaré!</option>
+                <option value="No asistiré">Lamentablemente no podré</option>
+            </select>
+            
+            <input type="number" id="rsvp-personas" placeholder="No. de personas (Ej. 2)" min="1" max="5">
+            
+            <textarea id="rsvp-mensaje" placeholder="Mensaje para los novios o restricciones (Opcional)" rows="2"></textarea>
+            
+            <button type="submit" class="btn btn-solid">ENVIAR</button>
+        </form>
     </section>
 
     <footer class="footer-section">
@@ -231,7 +231,16 @@
     <div id="music-btn" class="music-btn">
         <i class="fas fa-music"></i>
     </div>
-
+    <!-- ================== MODAL DE CONFIRMACIÓN ================== -->
+    <div id="rsvp-modal" class="rsvp-modal">
+        <div class="rsvp-modal-content">
+            <h3 class="card-title">¡Qué emoción!</h3>
+            <p class="card-address mb-2">Gracias por llenar tus datos.<br>Haz clic en continuar para enviar tu respuesta por WhatsApp.</p>
+            <button id="close-modal-btn" class="env-btn" style="margin: 0 auto;">
+                <span class="env-btn-inner">CONTINUAR <span class="arrow">&rarr;</span></span>
+            </button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

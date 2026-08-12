@@ -411,6 +411,41 @@ body {
     background-color: var(--texto-gris); /* Se pone gris si lo pausan */
 }
 
+/* ================== MODAL DE CONFIRMACIÓN (POPUP) ================== */
+.rsvp-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(11, 21, 40, 0.7); /* Fondo azul oscuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.rsvp-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rsvp-modal-content {
+    background: var(--fondo-crema);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.rsvp-modal.show .rsvp-modal-content {
+    transform: translateY(0);
+}
+
 /* Footer */
 .footer-section { background-color: var(--fondo-crema); text-align: center; padding: 4rem 1.5rem; border-top: 1px solid rgba(20, 55, 122, 0.1); }
 .footer-section p { font-size: 0.8rem; letter-spacing: 2px; color: var(--texto-gris); text-transform: uppercase; }

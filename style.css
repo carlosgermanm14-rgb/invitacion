@@ -446,6 +446,139 @@ body {
     transform: translateY(0);
 }
 
+/* ================== TARJETA NOTA DE INVITADOS ================== */
+.guest-notice-card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.notice-icon {
+    font-size: 2rem;
+    color: var(--azul-tinta);
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.notice-badge {
+    background-color: var(--fondo-crema);
+    border-left: 3px solid var(--azul-tinta);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.notice-badge p {
+    font-family: var(--fuente-textos);
+    font-size: 0.8rem;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.notice-badge strong {
+    color: var(--azul-tinta);
+    font-weight: 600;
+}
+
+
+/* ================== PASE DE INVITACIÓN PERSONAL ================== */
+.guest-pass-card { max-width: 500px; margin: 0 auto; }
+.pass-details { 
+    display: flex; 
+    justify-content: space-around; 
+    margin: 25px 0; 
+    border-top: 1px solid rgba(20, 55, 122, 0.1); 
+    border-bottom: 1px solid rgba(20, 55, 122, 0.1); 
+    padding: 20px 0; 
+}
+.pass-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pass-item i { color: var(--azul-tinta); font-size: 1.5rem; opacity: 0.8; }
+.pass-item p { font-family: var(--fuente-textos); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--texto-gris); }
+.pass-item span { font-family: var(--fuente-nombres); font-size: 2.2rem; color: var(--azul-tinta); font-weight: 600; line-height: 1; }
+
+.pass-total { background-color: var(--fondo-crema); padding: 20px; border-radius: 8px; margin-top: 10px; }
+.pass-total p { font-family: var(--fuente-textos); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: var(--texto-gris); margin-bottom: 8px; }
+.pass-total h4 { font-family: var(--fuente-nombres); font-size: 3rem; color: var(--azul-tinta); line-height: 1; font-style: italic;}
+
+/* ================== LISTA DE CHECKBOXES RSVP ================== */
+.checkboxes-container {
+    text-align: left;
+    background: rgba(20, 55, 122, 0.03);
+    border: 1px solid rgba(20, 55, 122, 0.15);
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.checkboxes-title {
+    font-family: var(--fuente-textos);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--azul-tinta);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#checkboxes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--fuente-textos);
+    font-size: 0.85rem;
+    color: var(--texto-oscuro);
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--azul-tinta);
+    cursor: pointer;
+}
+
+/* ================== DISPLAY DE FAMILIA RSVP ================== */
+.rsvp-family-display {
+    border: 1px solid rgba(20, 55, 122, 0.15);
+    padding: 20px 15px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.rsvp-family-display i {
+    color: var(--azul-tinta);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.rsvp-family-display p {
+    font-family: var(--fuente-textos);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texto-gris);
+    margin-bottom: 5px;
+}
+
+.rsvp-family-display h4 {
+    font-family: var(--fuente-nombres);
+    font-size: 2rem;
+    color: var(--azul-tinta);
+    line-height: 1;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
 /* Footer */
 .footer-section { background-color: var(--fondo-crema); text-align: center; padding: 4rem 1.5rem; border-top: 1px solid rgba(20, 55, 122, 0.1); }
 .footer-section p { font-size: 0.8rem; letter-spacing: 2px; color: var(--texto-gris); text-transform: uppercase; }

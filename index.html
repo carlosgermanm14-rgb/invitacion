@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Título y descripción para WhatsApp / Redes -->
     <title>Nuestra Boda | Aida & Geovanny</title>
     <meta name="title" content="Boda de Aida & Geovanny">
     <meta name="description" content="Guarda la fecha: 23 de Enero de 2027. ¡Acompáñanos a celebrar nuestro matrimonio!">
-
-    <!-- Open Graph / Facebook / WhatsApp Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carlosgermanm14-rgb.github.io/invitacion/">
     <meta property="og:title" content="Boda de Aida & Geovanny">
     <meta property="og:description" content="Guarda la fecha: 23 de Enero de 2027. Toca aquí para ver todos los detalles de nuestra boda.">
-    <!-- Imagen de vista previa (Usa tu logo/sello o una foto de ustedes) -->
     <meta property="og:image" content="https://carlosgermanm14-rgb.github.io/invitacion/img/logo.svg">
-
     <link rel="stylesheet" href="style.css">
-    <!-- Fuentes: Cormorant (Nombres), Montserrat (Textos pequeños), Tangerine (Caligrafía fina) -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ================== SOBRE DE LUJO ================== -->
+    <!-- SOBRE DE LUJO -->
     <div id="envelope-wrapper">
-        
-        <!-- Textos Superiores -->
         <div class="env-header">
             <p class="env-pre-title">Nos Casamos</p>
             <h1 class="env-names">Aida <span class="env-amp">&</span> Geovanny</h1>
             <p class="env-date">23 . ENERO . 2027</p>
         </div>
-
-        <!-- El Sobre -->
         <div class="envelope" id="envelope-element">
             <div class="env-back"></div>
             <div class="env-left"></div>
@@ -43,62 +31,41 @@
             <div class="env-bottom"></div>
             <div class="env-top-wrapper">
                 <div class="env-top"></div>
-                <!-- Sello de Lacre -->
-                <img src="img/logo.svg" alt="Sello de los novios" class="wax-seal-img">
+                <img src="img/logo.svg" alt="Sello" class="wax-seal-img">
             </div>
         </div>
-        
-        <!-- Botón, Instrucción y Flecha -->
         <div class="env-footer">
-            
             <p class="env-instruction">TOCA EL SOBRE PARA ABRIR</p>
-            
-            <!-- Flecha hacia arriba -->
             <svg class="swipe-icon-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
         </div>
     </div>
 
-    <!-- ================== PORTADA (SAVE THE DATE STYLE) ================== -->
+    <!-- PORTADA -->
     <section class="hero-fine-art">
-        
-        <!-- Flor Superior Izquierda (flor-3) -->
-        <img src="img/flor-3.svg" alt="Flor decoración" class="floral-img top-left">
-
-        <!-- Calendario -->
+        <img src="img/flor-3.svg" alt="Decoración" class="floral-img top-left">
         <div class="calendar-section">
             <h3 class="month-title">ENERO</h3>
             <div class="calendar-grid">
                 <span class="day-name">Dom</span><span class="day-name">Lun</span><span class="day-name">Mar</span>
                 <span class="day-name">Mie</span><span class="day-name">Jue</span><span class="day-name">Vie</span><span class="day-name">Sab</span>
-                
                 <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
                 <span class="heart-date">23<div class="dotted-line"></div></span>
             </div>
         </div>
-
-        <!-- Textos Centrales -->
         <div class="hero-text-container">
             <h2 class="script-title">Nuestra Boda</h2>
             <p class="subtitle">CELEBRA CON NOSOTROS</p>
-            
-            <!-- Nombres en 3 líneas -->
             <h1 class="couple-names">
                 <span>AIDA</span>
                 <span class="ampersand">&</span>
                 <span>GEOVANNY</span>
             </h1>
-            
             <p class="full-date">SÁBADO, ENERO 23, 2027</p>
         </div>
-
-        <!-- Flor Derecha (flor-1) -->
-        <img src="img/flor-1.svg" alt="Flor decoración" class="floral-img mid-right">
-
-        <!-- Flor Inferior Izquierda (flor-2) -->
-        <img src="img/flor-2.svg" alt="Flor decoración" class="floral-img bottom-left">
-
+        <img src="img/flor-1.svg" alt="Decoración" class="floral-img mid-right">
+        <img src="img/flor-2.svg" alt="Decoración" class="floral-img bottom-left">
         <div class="scroll-indicator">
             <svg class="swipe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--azul-tinta)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -106,7 +73,7 @@
         </div>
     </section>
 
-    <!-- ================== CONTADOR Y CALENDARIO ================== -->
+    <!-- CONTADOR -->
     <section class="countdown-section center-text">
         <p class="section-subtitle">FALTAN</p>
         <div id="countdown">
@@ -120,10 +87,9 @@
         </a>
     </section>
 
-    <!-- ================== UBICACIONES ================== -->
+    <!-- UBICACIONES -->
     <section class="locations-section">
         <div class="cards-container">
-            <!-- Ceremonia -->
             <div class="info-card">
                 <h3 class="card-title">CEREMONIA</h3>
                 <p class="card-time">1:00 PM</p>
@@ -131,8 +97,6 @@
                 <p class="card-address">Gabriel Leyva, Desarrollo Urbano Tres Ríos<br>CLN, SIN.</p>
                 <a href="https://maps.app.goo.gl/qvSA5Q57EZXgRRtS9" target="_blank" class="btn btn-outline">Ver Mapa</a>
             </div>
-            
-            <!-- Recepción -->
             <div class="info-card">
                 <h3 class="card-title">RECEPCIÓN</h3>
                 <p class="card-time">5:00 PM</p>
@@ -143,32 +107,25 @@
         </div>
     </section>
 
-    <!-- ================== DETALLES ================== -->
+    <!-- DETALLES (VESTIMENTA) -->
      <section class="details-section">
         <div class="cards-container">
-            <!-- Dress Code -->
             <div class="info-card-solid dress-code-card">
                 <p class="card-pre-title">CÓDIGO DE VESTIMENTA</p>
                 <h3 class="card-title">Formal</h3>
                 <p class="card-address mb-2">Nos encantaría verlos lucir espectaculares.<br>Para mantener la armonía de nuestro evento, les pedimos considerar lo siguiente:</p>
-                
                 <div class="dress-code-details">
-                    <!-- Mujeres -->
                     <div class="dc-gender">
                         <i class="fa-solid fa-person-dress dc-icon"></i>
                         <h4 class="dc-title">MUJERES</h4>
-                        
                         <div class="dc-reserved">
                             <span class="dc-circle reserved-white"></span>
                             <p>Por favor, <strong>reserva el color blanco</strong> y tonos perlados para la novia.</p>
                         </div>
                     </div>
-
-                    <!-- Hombres -->
                     <div class="dc-gender">
                         <i class="fa-solid fa-user-tie dc-icon"></i>
                         <h4 class="dc-title">HOMBRES</h4>
-                        
                         <div class="dc-reserved">
                             <span class="dc-circle reserved-blue"></span>
                             <p>Por favor, <strong>reserva el azul noche</strong> para el novio.</p>
@@ -178,28 +135,54 @@
             </div>
         </div>
     </section>
+
+    <!-- REGALOS -->
     <section class="details-section">
         <div class="cards-container">
-            <!-- Mesa de Regalos -->
             <div class="info-card">
                 <h3 class="card-title">MESA DE REGALOS</h3>
-                <p class="card-address">El regalo más grande que podemos recibir es contar con su presencia en el inicio de esta nueva etapa. Sin embargo, si naciera de su corazón realizarnos un obsequio, ponemos a su disposición un buzón de sobres el día del evento para ayudarnos a construir nuestros sueños juntos.
-                    Tambien ponemos a su disposición los datos de una cuenta bancaria si les es mas fácil.
-                </p>
-                
+                <p class="card-address">El regalo más grande que podemos recibir es contar con su presencia en el inicio de esta nueva etapa. Sin embargo, si naciera de su corazón realizarnos un obsequio, ponemos a su disposición un buzón de sobres el día del evento para ayudarnos a construir nuestros sueños juntos.<br>También ponemos a su disposición los datos de una cuenta bancaria si les es más fácil.</p>
                 <p class="card-title mt-2">TRANSFERENCIA</p>
                 <p class="card-address">BANAMEX<br>Cuenta: 012 345 6789<br>CLABE: 0123 4567 8910 1112 13<br>Aida Maria Lopez Ruiz</p>
             </div>
         </div>
     </section>
 
-    <!-- ================== RSVP ================== -->
-    <section class="rsvp-section center-text">
+    <!-- ================== NUEVO: PASE DE INVITACIÓN (Oculto por defecto) ================== -->
+    <section class="details-section center-text" id="seccion-pase" style="display: none; padding-top: 2rem;">
+        <div class="cards-container">
+            <div class="info-card-solid guest-pass-card">
+                <i class="fa-solid fa-ticket notice-icon"></i>
+                <p class="card-pre-title">PASE DE ACCESO</p>
+                <h3 class="card-title" id="texto-familia">Cargando...</h3>
+                
+                <div class="pass-details">
+                    <div class="pass-item">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <p>Adultos</p>
+                        <span id="texto-adultos">-</span>
+                    </div>
+                    <div class="pass-item">
+                        <i class="fa-solid fa-child"></i>
+                        <p>Niños</p>
+                        <span id="texto-ninos">-</span>
+                    </div>
+                </div>
+
+                <div class="pass-total">
+                    <p>Total de pases asignados</p>
+                    <h4 id="texto-asientos">-</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <!-- <section class="rsvp-section center-text">
         <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
         <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>10 de Diciembre de 2026</strong></p>
         
         <form id="rsvp-form" class="rsvp-form">
-            <!-- Agregamos IDs a todos los campos -->
             <input type="text" id="rsvp-nombre" placeholder="Nombre completo" required>
             
             <select id="rsvp-asistencia" required>
@@ -208,12 +191,50 @@
                 <option value="No asistiré">Lamentablemente no podré</option>
             </select>
             
-            <input type="number" id="rsvp-personas" placeholder="No. de personas (Ej. 2)" min="1" max="2">
-            
+            <input type="number" id="rsvp-personas" placeholder="No. de personas (Ej. 2)" min="1" required>
             <textarea id="rsvp-mensaje" placeholder="Mensaje para los novios o restricciones (Opcional)" rows="2"></textarea>
-            
             <button type="submit" class="btn btn-solid">ENVIAR</button>
         </form>
+    </section> -->
+
+    <!-- ================== RSVP ================== -->
+    <section class="rsvp-section center-text">
+        <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
+        <p class="card-address mb-2">Por favor confírmanos antes del<br><strong>10 de Diciembre de 2026</strong></p>
+        
+        <form id="rsvp-form" class="rsvp-form">
+            
+            <!-- Nuevo diseño elegante para mostrar el nombre de la familia -->
+            <div id="rsvp-family-display" class="rsvp-family-display" style="display: none;">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <p>Invitación especial para:</p>
+                <h4 id="rsvp-family-name-text">Familia</h4>
+            </div>
+            
+            <!-- Contenedor dinámico de checkboxes para los nombres -->
+            <div id="rsvp-checkboxes-container" class="checkboxes-container" style="display: none;">
+                <p class="checkboxes-title">Selecciona las personas que asistirán:</p>
+                <div id="checkboxes-list"></div>
+            </div>
+            
+            <textarea id="rsvp-mensaje" placeholder="Mensaje para los novios o restricciones alimenticias (Opcional)" rows="2"></textarea>
+            <button type="submit" class="btn btn-solid">ENVIAR CONFIRMACIÓN</button>
+        </form>
+    </section>
+
+    <!-- NOTA SOBRE BANQUETE -->
+    <section class="details-section center-text" style="padding-bottom: 2rem;">
+        <div class="cards-container">
+            <div class="info-card-solid guest-notice-card">
+                <i class="fa-solid fa-utensils notice-icon"></i>
+                <p class="card-pre-title">ACLARACIÓN IMPORTANTE</p>
+                <h3 class="card-title">Lugares & Banquete</h3>
+                <p class="card-address">Para nosotros es muy importante compartir este día tan especial con las personas que más amamos.</p>
+                <div class="notice-badge">
+                    <p>Por motivos de logística y capacidad del salón, <strong>los platillos y lugares están contados estrictamente</strong> según los pases asignados. Les pedimos de corazón respetar el número de personas indicadas en su invitación, ya que no habrá margen para asistentes adicionales.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="footer-section">
@@ -221,26 +242,20 @@
         <h2 class="footer-names">Aida & Geovanny</h2>
     </footer>
 
-    <!-- ================== MÚSICA DE FONDO ================== -->
-    <audio id="bg-music" loop>
-        <!-- Asegúrate de que el nombre coincida con tu archivo -->
-        <source src="cancion.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- Botón flotante para pausar/reproducir -->
-    <div id="music-btn" class="music-btn">
-        <i class="fas fa-music"></i>
-    </div>
-    <!-- ================== MODAL DE CONFIRMACIÓN ================== -->
+    <!-- MÚSICA Y MODAL -->
+    <audio id="bg-music" loop><source src="cancion.mp3" type="audio/mpeg"></audio>
+    <div id="music-btn" class="music-btn"><i class="fas fa-music"></i></div>
+    
     <div id="rsvp-modal" class="rsvp-modal">
         <div class="rsvp-modal-content">
             <h3 class="card-title">¡Qué emoción!</h3>
             <p class="card-address mb-2">Gracias por llenar tus datos.<br>Haz clic en continuar para enviar tu respuesta por WhatsApp.</p>
-            <button id="close-modal-btn" class="env-btn" style="margin: 0 auto;">
-                <span class="btn btn-solid">CONTINUAR <span class="arrow">&rarr;</span></span>
+            <button id="close-modal-btn" class="btn btn-solid" style="margin: 0 auto; width: auto; padding: 12px 30px;">
+                CONTINUAR <span class="arrow">&rarr;</span>
             </button>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

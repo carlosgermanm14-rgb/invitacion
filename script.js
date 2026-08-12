@@ -1,12 +1,22 @@
 // --- LÓGICA DEL SOBRE ---
 const envelope = document.getElementById('envelope-wrapper');
 const body = document.body;
+const bgMusic = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-btn');
+let isPlaying = false;
 
 // Bloquear scroll inicial
 body.style.overflow = 'hidden';
 
 envelope.addEventListener('click', function() {
     envelope.classList.add('open');
+
+    bgMusic.play().then(() => {
+        isPlaying = true;
+        musicBtn.classList.add('visible'); // Mostrar el botón
+    }).catch(error => {
+        console.log("El navegador bloqueó el autoplay", error);
+    });
     setTimeout(() => {
         body.style.overflow = 'auto'; // Permitir scroll
         envelope.style.display = 'none'; 
@@ -16,6 +26,19 @@ envelope.addEventListener('click', function() {
 // --- LÓGICA DE LA CUENTA REGRESIVA ---
 // Fecha de la boda: Enero 23, 2027 a la 1:00 PM (13:00)
 const fechaBoda = new Date("Jan 23, 2027 13:00:00").getTime();
+
+// Control para pausar/reproducir la música
+musicBtn.addEventListener('click', function() {
+    if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.classList.add('muted');
+        isPlaying = false;
+    } else {
+        bgMusic.play();
+        musicBtn.classList.remove('muted');
+        isPlaying = true;
+    }
+});
 
 const timer = setInterval(function() {
     const ahora = new Date().getTime();

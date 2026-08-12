@@ -245,6 +245,36 @@ body {
 }
 .rsvp-form input:focus, .rsvp-form select:focus, .rsvp-form textarea:focus { outline: none; border-color: var(--azul-tinta); }
 
+/* ================== BOTÓN DE MÚSICA FLOTANTE ================== */
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--azul-tinta);
+    color: var(--fondo-crema);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    opacity: 0; /* Oculto hasta que abran el sobre */
+    visibility: hidden;
+    transition: opacity 0.5s ease, background-color 0.3s;
+}
+
+.music-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.music-btn.muted {
+    background-color: var(--texto-gris); /* Se pone gris si lo pausan */
+}
+
 /* Footer */
 .footer-section { background-color: var(--fondo-crema); text-align: center; padding: 4rem 1.5rem; border-top: 1px solid rgba(20, 55, 122, 0.1); }
 .footer-section p { font-size: 0.8rem; letter-spacing: 2px; color: var(--texto-gris); text-transform: uppercase; }

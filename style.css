@@ -130,16 +130,16 @@ body {
 
 /* Flor central derecha (Más grande) */
 .floral-img.mid-right {
-    top: 55%; 
-    right: -65px; 
+    top: 50%; 
+    right: -120px; 
     width: 260px; /* Tamaño aumentado */
     transform: translateY(-50%);
 }
 
 /* Flor inferior izquierda */
 .floral-img.bottom-left {
-    bottom: -40px; 
-    left: -20px; 
+    bottom: -85px; 
+    left: -65px; 
     width: 230px; /* Ligeramente aumentada para equilibrar el peso visual */
 }
 

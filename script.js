@@ -1,24 +1,33 @@
 // ================== 1. BASE DE DATOS DE INVITADOS ==================
 const LISTA_INVITADOS = {
     "lora": { 
-        familia: "Lora", 
-        integrantes: ["Antonio Lora"] 
+        familia: "Antonio Lora", 
+        integrantes: ["Antonio Lora"],
+        ninos:0,
+        adultos:1
     },
     "paul": { 
-        familia: "German Meza", 
-        integrantes: ["Annel Meza", "Paul German", "Gael German Meza"] 
+        familia: "Familia German Meza", 
+        integrantes: ["Annel Meza", "Paul German", "Gael German Meza"],
+        ninos:1,
+        adultos:2
     },
     "padres-novio": { 
-        familia: "German Millan", 
-        integrantes: ["Rosa Millan","Gregorio German"] 
+        familia: "Familia German Millan", 
+        integrantes: ["Rosa Millan","Gregorio German"],
+        ninos:0,
+        adultos:2
     },
     "padres-novia":{
-        familia: "Lopez Ruiz",
-        integrantes: ["Luisa Ruiz", "Manuel Lopez", "Fernanda Lopez Ruiz", "Raulin"]
+        familia: "Familia Lopez Ruiz",
+        integrantes: ["Luisa Ruiz", "Manuel Lopez", "Fernanda Lopez Ruiz", "Raulin"],
+        ninos:0,
+        adultos:4
     }
 };
 
 
+// ================== 2. LÓGICA DEL PASE Y URL ==================
 // ================== 2. LÓGICA DEL PASE Y URL ==================
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -27,7 +36,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (idInvitado && LISTA_INVITADOS[idInvitado]) {
         const datos = LISTA_INVITADOS[idInvitado];
         
-        // Mostrar nombre de la familia en la tarjeta elegante
+        // 1. Mostrar y llenar los datos en la tarjeta del PASE DE ACCESO
+        const seccionPase = document.getElementById('seccion-pase');
+        if (seccionPase) {
+            seccionPase.style.display = 'block';
+            
+            // Asignar familia, adultos y niños
+            if(document.getElementById('texto-familia')) document.getElementById('texto-familia').textContent = datos.familia;
+            if(document.getElementById('texto-adultos')) document.getElementById('texto-adultos').textContent = datos.adultos;
+            if(document.getElementById('texto-ninos')) document.getElementById('texto-ninos').textContent = datos.ninos;
+            
+            // Calcular el total de asientos (sumando adultos + niños)
+            if(document.getElementById('texto-asientos')) {
+                document.getElementById('texto-asientos').textContent = datos.adultos + datos.ninos;
+            }
+        }
+
+        // 2. Mostrar nombre de la familia en la insignia del RSVP
         const familyDisplay = document.getElementById('rsvp-family-display');
         const familyNameText = document.getElementById('rsvp-family-name-text');
         
@@ -36,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
             familyNameText.textContent = datos.familia;
         }
 
-        // Mostrar la lista de checkboxes
+        // 3. Mostrar la lista de checkboxes
         const containerCheckboxes = document.getElementById('rsvp-checkboxes-container');
         const listDiv = document.getElementById('checkboxes-list');
 
         if (containerCheckboxes) containerCheckboxes.style.display = 'block';
 
-        // Renderizar cada nombre como un checkbox
+        // 4. Renderizar cada nombre como un checkbox
         if (listDiv) {
             listDiv.innerHTML = "";
             datos.integrantes.forEach((nombre) => {
@@ -54,14 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 listDiv.appendChild(label);
             });
-        }
-
-        // Mostrar la tarjeta del pase superior si existe
-        const seccionPase = document.getElementById('seccion-pase');
-        if (seccionPase) {
-            seccionPase.style.display = 'block';
-            if(document.getElementById('texto-familia')) document.getElementById('texto-familia').textContent = datos.familia;
-            if(document.getElementById('texto-asientos')) document.getElementById('texto-asientos').textContent = datos.integrantes.length;
         }
     }
 });

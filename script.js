@@ -9,6 +9,15 @@ const LISTA_INVITADOS = {
         ninos: 0,
         adultos: 1
     },
+    "obed": { 
+        familia: "Manuel Obed Inostroza Zepeda", 
+        integrantes: [
+            { nombre: "Obed Inostroza", asiento: "Mesa 1 - Asiento A10" },
+            { nombre: "Invitado +1", asiento: "Mesa 1 - Asiento A09" }
+        ],
+        ninos: 0,
+        adultos: 1
+    },
     "paul": { 
         familia: "Familia German Meza", 
         integrantes: [

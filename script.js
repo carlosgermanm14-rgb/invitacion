@@ -34,7 +34,7 @@ const LISTA_INVITADOS = {
             { nombre: "Luisa Ruiz", asiento: "Mesa Honor - Asiento H3" },
             { nombre: "Manuel Lopez", asiento: "Mesa Honor - Asiento H4" },
             { nombre: "Fernanda Lopez Ruiz", asiento: "Mesa Honor - Asiento H5" },
-            { nombre: "Raulin", asiento: "Mesa Honor - Asiento H6" }
+            { nombre: "Invitado +1", asiento: "Mesa Honor - Asiento H6" }
         ],
         ninos: 0,
         adultos: 4

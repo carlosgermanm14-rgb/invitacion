@@ -144,11 +144,11 @@ if(rsvpForm) {
                               ? familyNameElement.textContent 
                               : "Invitado Web";
 
-        const asistencia = document.getElementById('rsvp-asistencia').value;
         const mensaje = document.getElementById('rsvp-mensaje').value;
 
         // Extraer los asistentes que sí marcaron la casilla
         const checkboxes = document.querySelectorAll('input[name="asistentes_confirmados"]:checked');
+        console.log(checkboxes)
         let personasConfirmadas = [];
         checkboxes.forEach(cb => personasConfirmadas.push(cb.value));
 

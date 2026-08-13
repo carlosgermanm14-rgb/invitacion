@@ -16,7 +16,7 @@ const LISTA_INVITADOS = {
             { nombre: "Invitado +1", asiento: "Mesa 1 - Asiento A09" }
         ],
         ninos: 0,
-        adultos: 1
+        adultos: 2
     },
     "paul": { 
         familia: "Familia German Meza", 

@@ -1,39 +1,55 @@
 // ================== 1. BASE DE DATOS DE INVITADOS ==================
+// ================== BASE DE DATOS DE INVITADOS ==================
 const LISTA_INVITADOS = {
     "lora": { 
         familia: "Antonio Lora", 
-        integrantes: ["Antonio Lora"],
-        ninos:0,
-        adultos:1
+        integrantes: [
+            { nombre: "Antonio Lora", asiento: "Mesa 1 - Asiento A10" }
+        ],
+        ninos: 0,
+        adultos: 1
     },
     "paul": { 
         familia: "Familia German Meza", 
-        integrantes: ["Annel Meza", "Paul German", "Gael German Meza"],
-        ninos:1,
-        adultos:2
+        integrantes: [
+            { nombre: "Annel Meza", asiento: "Mesa 2 - Asiento B1" },
+            { nombre: "Paul German", asiento: "Mesa 2 - Asiento B2" },
+            { nombre: "Gael German Meza", asiento: "Mesa 2 - Asiento B3" }
+        ],
+        ninos: 1,
+        adultos: 2
     },
     "padres-novio": { 
         familia: "Familia German Millan", 
-        integrantes: ["Rosa Millan","Gregorio German"],
-        ninos:0,
-        adultos:2
+        integrantes: [
+            { nombre: "Rosa Millan", asiento: "Mesa Honor - Asiento H1" },
+            { nombre: "Gregorio German", asiento: "Mesa Honor - Asiento H2" }
+        ],
+        ninos: 0,
+        adultos: 2
     },
-    "padres-novia":{
+    "padres-novia": {
         familia: "Familia Lopez Ruiz",
-        integrantes: ["Luisa Ruiz", "Manuel Lopez", "Fernanda Lopez Ruiz", "Raulin"],
-        ninos:0,
-        adultos:4
+        integrantes: [
+            { nombre: "Luisa Ruiz", asiento: "Mesa Honor - Asiento H3" },
+            { nombre: "Manuel Lopez", asiento: "Mesa Honor - Asiento H4" },
+            { nombre: "Fernanda Lopez Ruiz", asiento: "Mesa Honor - Asiento H5" },
+            { nombre: "Raulin", asiento: "Mesa Honor - Asiento H6" }
+        ],
+        ninos: 0,
+        adultos: 4
     }
 };
 
 
 // ================== 2. LÓGICA DEL PASE Y URL ==================
-// ================== 2. LÓGICA DEL PASE Y URL ==================
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const idInvitado = urlParams.get('id');
 
+    // PRIMERO verificamos que el invitado exista en la lista
     if (idInvitado && LISTA_INVITADOS[idInvitado]) {
+        // Obtenemos sus datos
         const datos = LISTA_INVITADOS[idInvitado];
         
         // 1. Mostrar y llenar los datos en la tarjeta del PASE DE ACCESO
@@ -52,6 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        // =================NUEVO=================
+        // MAGIA VIP PARA LOS PADRES
+        if (idInvitado === "padres-novio" || idInvitado === "padres-novia" || idInvitado === "paul") {
+            const tarjetaPase = document.getElementById('tarjeta-pase');
+            const tituloPase = document.getElementById('titulo-pase');
+            
+            if (tarjetaPase) {
+                tarjetaPase.classList.add('vip-gold-pass'); // Aplica el estilo dorado
+            }
+            if (tituloPase) {
+                tituloPase.textContent = "PASE VIP DE HONOR"; // Cambia el texto
+            }
+        }
+        // =======================================
+
         // 2. Mostrar nombre de la familia en la insignia del RSVP
         const familyDisplay = document.getElementById('rsvp-family-display');
         const familyNameText = document.getElementById('rsvp-family-name-text');
@@ -67,15 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (containerCheckboxes) containerCheckboxes.style.display = 'block';
 
-        // 4. Renderizar cada nombre como un checkbox
+        // Renderizar cada integrante como un checkbox mostrando su asiento
         if (listDiv) {
             listDiv.innerHTML = "";
-            datos.integrantes.forEach((nombre) => {
+            datos.integrantes.forEach((persona) => {
                 const label = document.createElement('label');
                 label.className = 'checkbox-item';
                 label.innerHTML = `
-                    <input type="checkbox" name="asistentes_confirmados" value="${nombre}" checked>
-                    <span>${nombre}</span>
+                    <input type="checkbox" name="asistentes_confirmados" value="${persona.nombre} (${persona.asiento})" checked>
+                    <span><strong>${persona.nombre}</strong> <small style="opacity: 0.75; font-size: 0.75rem;">— ${persona.asiento}</small></span>
                 `;
                 listDiv.appendChild(label);
             });
@@ -157,40 +188,45 @@ let whatsappUrl = "";
 
 if(rsvpForm) {
     rsvpForm.onsubmit = function(event) {
-        event.preventDefault(); // Bloquea la recarga de página
+        event.preventDefault(); // Evita recargar la página
 
-        // Obtener el nombre de la familia desde el texto bonito (si existe) o usar un genérico
+        // 1. Obtener el nombre de la familia desde la tarjeta visual
         const familyNameElement = document.getElementById('rsvp-family-name-text');
         const nombreFamilia = (familyNameElement && familyNameElement.textContent !== "Familia") 
                               ? familyNameElement.textContent 
                               : "Invitado Web";
 
+        const asistencia = document.getElementById('rsvp-asistencia').value;
         const mensaje = document.getElementById('rsvp-mensaje').value;
 
-        // Extraer los asistentes que sí marcaron la casilla
+        // 2. Extraer las personas seleccionadas con sus asientos
         const checkboxes = document.querySelectorAll('input[name="asistentes_confirmados"]:checked');
-        console.log(checkboxes)
         let personasConfirmadas = [];
         checkboxes.forEach(cb => personasConfirmadas.push(cb.value));
 
-        // TU NÚMERO
+        // 3. Tu número de WhatsApp
         const telefono = "526671312162"; 
 
-        // Armar el texto para WhatsApp
+        // 4. Armar el mensaje estructurado
         let texto = `¡Hola! Quiero confirmar nuestra asistencia a su boda. 💍✨\n\n`;
         texto += `*Familia/Invitado:* ${nombreFamilia}\n`;
-        // Si asisten y hay personas seleccionadas, hacer la lista en WhatsApp
-        if (personasConfirmadas.length > 0) {
-            texto += `*Asistentes confirmados (${personasConfirmadas.length}):*\n`;
+        texto += `*Asistencia:* ${asistencia}\n`;
+        
+        // Si confirman asistencia y seleccionaron al menos a un integrante
+        if (asistencia === "Sí asistiremos" && personasConfirmadas.length > 0) {
+            texto += `\n*Asistentes confirmados (${personasConfirmadas.length}):*\n`;
             personasConfirmadas.forEach(p => texto += ` • ${p}\n`);
+        } else if (asistencia === "No asistiremos") {
+            texto += `\nLamentablemente no podremos acompañarlos en esta ocasión.\n`;
         }
         
-        if (mensaje) texto += `*Mensaje:* ${mensaje}\n`;
+        if (mensaje) texto += `\n*Mensaje:* ${mensaje}\n`;
 
-        // Codificar el texto para que la URL no se rompa
+        // 5. Codificar para evitar errores con caracteres o saltos de línea
         const textoCodificado = encodeURIComponent(texto);
         whatsappUrl = `https://wa.me/${telefono}?text=${textoCodificado}`;
 
+        // 6. Abrir ventana de confirmación
         if(rsvpModal) {
             rsvpModal.classList.add('show');
         }
@@ -200,6 +236,6 @@ if(rsvpForm) {
 if(closeModalBtn) {
     closeModalBtn.addEventListener('click', function() {
         window.open(whatsappUrl, '_blank'); 
-        rsvpModal.classList.remove('show'); 
+        if(rsvpModal) rsvpModal.classList.remove('show'); 
     });
 }

@@ -181,7 +181,9 @@ body {
 }
 .heart-date::before {
     content: ''; position: absolute;
-    width: 35px; height: 35px;
+    top: -3px;
+    width: 40px;
+    height: 40px;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2314377a" stroke-width="0.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>') no-repeat center;
     background-size: contain; z-index: -1;
 }
@@ -481,9 +483,17 @@ body {
     font-weight: 600;
 }
 
+/* ================== PASE DE INVITACIÓN NORMAL ================== */
+.guest-pass-card { 
+    max-width: 500px; 
+    margin: 0 auto; 
+    border: 1px solid rgba(20, 55, 122, 0.15); /* Borde sutil azul */
+    border-radius: 20px; /* Esquinas amigables y redondeadas */
+    padding: 35px 25px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave para que flote */
+    position: relative;
+}
 
-/* ================== PASE DE INVITACIÓN PERSONAL ================== */
-.guest-pass-card { max-width: 500px; margin: 0 auto; }
 .pass-details { 
     display: flex; 
     justify-content: space-around; 
@@ -492,15 +502,60 @@ body {
     border-bottom: 1px solid rgba(20, 55, 122, 0.1); 
     padding: 20px 0; 
 }
+
 .pass-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .pass-item i { color: var(--azul-tinta); font-size: 1.5rem; opacity: 0.8; }
-.pass-item p { font-family: var(--fuente-textos); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--texto-gris); }
+.pass-item p { font-family: var(--fuente-textos); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--texto-gris); font-weight: 500; }
 .pass-item span { font-family: var(--fuente-nombres); font-size: 2.2rem; color: var(--azul-tinta); font-weight: 600; line-height: 1; }
 
-.pass-total { background-color: var(--fondo-crema); padding: 20px; border-radius: 8px; margin-top: 10px; }
-.pass-total p { font-family: var(--fuente-textos); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: var(--texto-gris); margin-bottom: 8px; }
-.pass-total h4 { font-family: var(--fuente-nombres); font-size: 3rem; color: var(--azul-tinta); line-height: 1; font-style: italic;}
+.pass-total { 
+    background-color: var(--fondo-crema); 
+    padding: 20px; 
+    border-radius: 12px; 
+    margin-top: 10px; 
+    border: 1px solid rgba(20, 55, 122, 0.05); 
+}
+.pass-total p { font-family: var(--fuente-textos); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: var(--texto-gris); margin-bottom: 8px; font-weight: 500;}
+.pass-total h4 { font-family: var(--fuente-nombres); font-size: 3.2rem; color: var(--azul-tinta); line-height: 1; font-style: italic;}
 
+
+/* ================== PASE VIP DE HONOR (FONDO DORADO ELEGANTE) ================== */
+.vip-gold-pass {
+    /* Degradado dorado suave y lujoso */
+    background: linear-gradient(135deg, #f9eaaf, #dfbb70) !important;
+    border: 1px solid #c9a45c !important; 
+    /* Doble borde interno para efecto de tarjeta premium */
+    box-shadow: 0 15px 35px rgba(223, 187, 112, 0.35), inset 0 0 0 5px rgba(255, 255, 255, 0.4) !important; 
+}
+
+/* Todos los textos e íconos principales van en Azul Tinta para resaltar sobre el oro */
+.vip-gold-pass .card-title, 
+.vip-gold-pass .pass-item span, 
+.vip-gold-pass .pass-total h4,
+.vip-gold-pass .notice-icon,
+.vip-gold-pass .pass-item i,
+.vip-gold-pass .card-pre-title {
+    color: var(--azul-tinta) !important; 
+}
+
+/* Títulos pequeños un poco más transparentes pero en azul */
+.vip-gold-pass .pass-item p,
+.vip-gold-pass .pass-total p {
+    color: rgba(20, 55, 122, 0.7) !important;
+    font-weight: 600 !important;
+}
+
+/* Líneas separadoras en azul sutil */
+.vip-gold-pass .pass-details {
+    border-top: 1px solid rgba(20, 55, 122, 0.15) !important;
+    border-bottom: 1px solid rgba(20, 55, 122, 0.15) !important;
+}
+
+/* Caja de total de pases con un ligero velo blanco */
+.vip-gold-pass .pass-total {
+    background-color: rgba(255, 255, 255, 0.35) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
 /* ================== LISTA DE CHECKBOXES RSVP ================== */
 .checkboxes-container {
     text-align: left;

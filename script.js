@@ -1,16 +1,20 @@
 // ================== 1. BASE DE DATOS DE INVITADOS ==================
 const LISTA_INVITADOS = {
-    "perez": { 
-        familia: "Familia Pérez López", 
-        integrantes: ["Juan Pérez", "María López", "Sofía Pérez"] 
+    "lora": { 
+        familia: "Lora", 
+        integrantes: ["Antonio Lora"] 
     },
-    "tios-lopez": { 
-        familia: "Tíos López", 
-        integrantes: ["Carlos López", "Ana Martínez"] 
+    "paul": { 
+        familia: "German Meza", 
+        integrantes: ["Annel Meza", "Paul German", "Gael German Meza"] 
     },
-    "juan-carlos": { 
-        familia: "Juan Carlos Martínez", 
-        integrantes: ["Juan Carlos Martínez"] 
+    "padres-novio": { 
+        familia: "German Millan", 
+        integrantes: ["Rosa Millan","Gregorio German"] 
+    },
+    "padres-novia":{
+        familia: "Lopez Ruiz",
+        integrantes: ["Luisa Ruiz", "Manuel Lopez", "Fernanda Lopez Ruiz", "Raulin"]
     }
 };
 

@@ -205,7 +205,6 @@ if(rsvpForm) {
                               ? familyNameElement.textContent 
                               : "Invitado Web";
 
-        const asistencia = document.getElementById('rsvp-asistencia').value;
         const mensaje = document.getElementById('rsvp-mensaje').value;
 
         // 2. Extraer las personas seleccionadas con sus asientos
@@ -219,15 +218,12 @@ if(rsvpForm) {
         // 4. Armar el mensaje estructurado
         let texto = `¡Hola! Quiero confirmar nuestra asistencia a su boda. 💍✨\n\n`;
         texto += `*Familia/Invitado:* ${nombreFamilia}\n`;
-        texto += `*Asistencia:* ${asistencia}\n`;
         
         // Si confirman asistencia y seleccionaron al menos a un integrante
-        if (asistencia === "Sí asistiremos" && personasConfirmadas.length > 0) {
+        if (personasConfirmadas.length > 0) {
             texto += `\n*Asistentes confirmados (${personasConfirmadas.length}):*\n`;
             personasConfirmadas.forEach(p => texto += ` • ${p}\n`);
-        } else if (asistencia === "No asistiremos") {
-            texto += `\nLamentablemente no podremos acompañarlos en esta ocasión.\n`;
-        }
+        } 
         
         if (mensaje) texto += `\n*Mensaje:* ${mensaje}\n`;
 

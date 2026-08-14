@@ -248,3 +248,113 @@ if(closeModalBtn) {
         if(rsvpModal) rsvpModal.classList.remove('show'); 
     });
 }
+
+// ================== 6. LÓGICA DEL CARRUSEL DE FOTOS ==================
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('carouselTrack');
+    const nextButton = document.getElementById('nextBtn');
+    const prevButton = document.getElementById('prevBtn');
+    const dotsNav = document.getElementById('carouselNav');
+    
+    if(track && nextButton && prevButton && dotsNav) {
+        const slides = Array.from(track.children);
+        const dots = Array.from(dotsNav.children);
+        let currentIndex = 0;
+        let carruselInterval;
+
+        const moveToSlide = (index) => {
+            // Mover la pista de imágenes
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Actualizar los puntitos de navegación
+            dots.forEach(dot => dot.classList.remove('current-indicator'));
+            dots[index].classList.add('current-indicator');
+            
+            currentIndex = index;
+        };
+
+        const avanzarCarrusel = () => {
+            let nextIndex = currentIndex + 1;
+            if (nextIndex >= slides.length) nextIndex = 0; // Si llega a la última, vuelve a la primera
+            moveToSlide(nextIndex);
+        };
+
+        // Botón Siguiente
+        nextButton.addEventListener('click', () => {
+            avanzarCarrusel();
+            resetIntervalo(); // Pausa el autoplay si el usuario interactúa
+        });
+
+        // Botón Anterior
+        prevButton.addEventListener('click', () => {
+            let prevIndex = currentIndex - 1;
+            if (prevIndex < 0) prevIndex = slides.length - 1; 
+            moveToSlide(prevIndex);
+            resetIntervalo();
+        });
+
+        // Clic en los puntitos
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                moveToSlide(index);
+                resetIntervalo();
+            });
+        });
+
+        // Autoplay (Pasa la foto sola cada 4 segundos)
+        const iniciarIntervalo = () => {
+            carruselInterval = setInterval(avanzarCarrusel, 4000);
+        };
+
+        const resetIntervalo = () => {
+            clearInterval(carruselInterval);
+            iniciarIntervalo();
+        };
+
+        // Iniciar el movimiento automático al cargar
+        iniciarIntervalo();
+    }
+});
+
+// ================== 7. LIGHTBOX (AMPLIAR FOTOS) ==================
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+    const images = document.querySelectorAll('.carousel-image'); // Selecciona todas las fotos del carrusel
+
+    if (lightbox && lightboxImg && closeBtn) {
+        
+        // 1. Abrir la imagen al hacerle clic
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'flex';
+                // Pequeño retraso para que la animación CSS funcione bien
+                setTimeout(() => {
+                    lightbox.classList.add('show');
+                }, 10);
+                lightboxImg.src = this.src; // Copia la ruta de la foto tocada
+                document.body.style.overflow = 'hidden'; // Evita que la página de fondo se mueva
+            });
+        });
+
+        // 2. Función para cerrar la imagen
+        const closeLightbox = () => {
+            lightbox.classList.remove('show');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300); // Espera a que termine la animación para ocultarlo del todo
+            document.body.style.overflow = 'auto'; // Restaura el scroll de la página
+        };
+
+        // Cerrar al tocar la "X"
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Cerrar al tocar cualquier parte oscura del fondo
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+});

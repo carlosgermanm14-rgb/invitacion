@@ -814,6 +814,168 @@ body {
     box-shadow: 0 6px 15px rgba(20, 55, 122, 0.2);
 }
 
+/* ================== CARRUSEL DE FOTOS (MINIMALISTA) ================== */
+.photo-gallery-section {
+    padding: 4rem 1.5rem 5rem 1.5rem;
+    background-color: var(--fondo-crema);
+    border-top: 1px solid rgba(20, 55, 122, 0.1);
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* El marco blanco estilo Fine Art / Impresión física */
+.carousel-track-container {
+    width: 80%; /* Deja espacio a los lados para las flechas */
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 12px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.carousel-track {
+    display: flex;
+    list-style: none;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición súper suave y elegante */
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 380px; /* Ajusta la altura a tu gusto, 380px queda muy bien en móviles */
+    object-fit: cover; /* Evita que las fotos se deformen */
+    border-radius: 4px;
+    display: block;
+}
+
+/* Botones de control */
+.carousel-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--azul-tinta);
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.6;
+}
+
+.carousel-btn:hover {
+    color: #C2A770; /* Dorado cálido al pasar el ratón */
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* Indicadores (Puntitos minimalistas) */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.carousel-indicator {
+    border: 1px solid var(--azul-tinta);
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    opacity: 0.4;
+}
+
+.carousel-indicator.current-indicator {
+    background: var(--azul-tinta);
+    opacity: 1;
+    transform: scale(1.2); /* Crece sutilmente el puntito activo */
+}
+
+/* ================== EFECTOS DE LAS FOTOS DEL CARRUSEL ================== */
+.carousel-image {
+    cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02); /* Se acerca un poquito al pasar el mouse por encima */
+}
+
+/* ================== LIGHTBOX (VENTANA PARA AMPLIAR FOTO) ================== */
+.image-lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 100000; /* Por encima del menú y del sobre */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 21, 40, 0.92); /* Azul oscuro de tu paleta, casi negro */
+    backdrop-filter: blur(5px); /* Efecto de cristal esmerilado en el fondo */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-lightbox.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh; /* 85% del alto de la pantalla */
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    border: 2px solid var(--fondo-crema); /* Marco sutil al ampliar */
+}
+
+.image-lightbox.show .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: var(--fondo-crema);
+    font-size: 45px;
+    font-weight: 300;
+    cursor: pointer;
+    font-family: sans-serif;
+    z-index: 100001;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: #C2A770; /* Se pone dorado al pasar el mouse */
+}
+
 
 /* Footer */
 .footer-section { background-color: var(--fondo-crema); text-align: center; padding: 4rem 1.5rem; border-top: 1px solid rgba(20, 55, 122, 0.1); }

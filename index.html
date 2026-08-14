@@ -87,6 +87,54 @@
         </a>
     </section>
 
+    <!-- ================== NUESTRA HISTORIA (CARRUSEL) ================== -->
+    <section class="photo-gallery-section center-text">
+        <p class="section-subtitle">NUESTRA HISTORIA</p>
+        <h3 class="script-title mb-2">Momentos Inolvidables</h3>
+        
+        <div class="carousel-container">
+            <!-- Botón Anterior -->
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Pista del carrusel -->
+            <div class="carousel-track-container">
+                <ul class="carousel-track" id="carouselTrack">
+                    <!-- FOTO 1 -->
+                    <li class="carousel-slide current-slide">
+                        <img src="img/galeria-1.jpeg" alt="Aida y Geovanny 1" class="carousel-image">
+                    </li>
+                    <!-- FOTO 2 -->
+                    <li class="carousel-slide">
+                        <img src="img/galeria-2.jpeg" alt="Aida y Geovanny 2" class="carousel-image">
+                    </li>
+                    <!-- FOTO 3 -->
+                    <li class="carousel-slide">
+                        <img src="img/galeria-3.jpeg" alt="Aida y Geovanny 3" class="carousel-image">
+                    </li>
+                    <!-- FOTO 4 -->
+                    <li class="carousel-slide">
+                        <img src="img/galeria-2.jpeg" alt="Aida y Geovanny 4" class="carousel-image">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Botón Siguiente -->
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Indicadores (Puntitos) -->
+        <div class="carousel-nav" id="carouselNav">
+            <button class="carousel-indicator current-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+        </div>
+    </section>
+
     <!-- ================== NUESTROS PADRES ================== -->
     <section class="parents-section center-text">
         <!-- Nuevo marco elegante -->
@@ -325,6 +373,12 @@
                 CONTINUAR <span class="arrow">&rarr;</span>
             </button>
         </div>
+    </div>
+
+    <!-- ================== LIGHTBOX / AMPLIAR FOTO ================== -->
+    <div id="image-lightbox" class="image-lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Foto ampliada">
     </div>
     
     <script src="script.js"></script>

@@ -287,6 +287,33 @@
         </form>
     </section> -->
 
+    <!-- ================== PLAYLIST / MÚSICA (REDISEÑO FIESTA) ================== -->
+    <section class="playlist-section center-text">
+        <div class="cards-container">
+            <div class="info-card-solid playlist-card">
+                
+                <!-- Íconos animados de fiesta -->
+                <div class="playlist-icons">
+                    <i class="fa-solid fa-music floating-note-1"></i>
+                    <i class="fa-solid fa-compact-disc spinning-record"></i>
+                    <i class="fa-solid fa-music floating-note-2"></i>
+                </div>
+                
+                <p class="card-pre-title">LA FIESTA</p>
+                <h3 class="card-title text-white">¡Nos vemos en la pista!</h3>
+                <p class="card-address text-light mb-2">
+                    Ayúdanos a armar la playlist perfecta. ¿Qué canción te haría levantarte a bailar de inmediato? 💃🕺
+                </p>
+                
+                <div class="playlist-input-container">
+                    <i class="fa-solid fa-headphones"></i>
+                    <input type="text" id="playlist-cancion" placeholder="Ej. Payaso de Rodeo...">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     <!-- ================== RSVP ================== -->
     <section class="rsvp-section center-text">
         <h3 class="card-title">CONFIRMAR ASISTENCIA</h3>
@@ -300,6 +327,11 @@
                 <p>Invitación especial para:</p>
                 <h4 id="rsvp-family-name-text">Familia</h4>
             </div>
+            <select id="rsvp-asistencia" required style="margin-top: 15px; margin-bottom: 15px;">
+                <option value="" disabled selected>¿Asistirán a la boda?</option>
+                <option value="Sí asistiremos">¡Sí, ahí estaremos!</option>
+                <option value="No asistiremos">Lamentablemente no podremos</option>
+            </select>
             
             <!-- Contenedor dinámico de checkboxes para los nombres -->
             <div id="rsvp-checkboxes-container" class="checkboxes-container" style="display: none;">

@@ -199,13 +199,20 @@ if(rsvpForm) {
     rsvpForm.onsubmit = function(event) {
         event.preventDefault(); // Evita recargar la página
 
-        // 1. Obtener el nombre de la familia desde la tarjeta visual
+        // 1. Obtener el nombre de la familia
         const familyNameElement = document.getElementById('rsvp-family-name-text');
         const nombreFamilia = (familyNameElement && familyNameElement.textContent !== "Familia") 
                               ? familyNameElement.textContent 
                               : "Invitado Web";
 
+        const asistencia = document.getElementById('rsvp-asistencia').value;
         const mensaje = document.getElementById('rsvp-mensaje').value;
+        
+        // ========================================================
+        // ¡NUEVO!: Atrapar la canción desde la sección externa
+        const cancionElement = document.getElementById('playlist-cancion');
+        const cancion = cancionElement ? cancionElement.value.trim() : "";
+        // ========================================================
 
         // 2. Extraer las personas seleccionadas con sus asientos
         const checkboxes = document.querySelectorAll('input[name="asistentes_confirmados"]:checked');
@@ -218,16 +225,24 @@ if(rsvpForm) {
         // 4. Armar el mensaje estructurado
         let texto = `¡Hola! Quiero confirmar nuestra asistencia a su boda. 💍✨\n\n`;
         texto += `*Familia/Invitado:* ${nombreFamilia}\n`;
+        texto += `*Asistencia:* ${asistencia}\n`;
         
         // Si confirman asistencia y seleccionaron al menos a un integrante
-        if (personasConfirmadas.length > 0) {
+        if (asistencia === "Sí asistiremos" && personasConfirmadas.length > 0) {
             texto += `\n*Asistentes confirmados (${personasConfirmadas.length}):*\n`;
             personasConfirmadas.forEach(p => texto += ` • ${p}\n`);
-        } 
+            
+            // Adjuntar la canción solo si asisten y la escribieron
+            if (cancion !== "") {
+                texto += `\n*¡En la fiesta queremos bailar!:* 🎵 ${cancion}\n`;
+            }
+        } else if (asistencia === "No asistiremos") {
+            texto += `\nLamentablemente no podremos acompañarlos en esta ocasión.\n`;
+        }
         
         if (mensaje) texto += `\n*Mensaje:* ${mensaje}\n`;
 
-        // 5. Codificar para evitar errores con caracteres o saltos de línea
+        // 5. Codificar para WhatsApp
         const textoCodificado = encodeURIComponent(texto);
         whatsappUrl = `https://wa.me/${telefono}?text=${textoCodificado}`;
 

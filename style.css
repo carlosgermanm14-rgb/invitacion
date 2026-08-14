@@ -813,8 +813,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(20, 55, 122, 0.2);
 }
-
-/* ================== CARRUSEL DE FOTOS (MINIMALISTA) ================== */
+/* ================== CARRUSEL DE FOTOS (EFECTO POLAROID) ================== */
 .photo-gallery-section {
     padding: 4rem 1.5rem 5rem 1.5rem;
     background-color: var(--fondo-crema);
@@ -824,27 +823,24 @@ body {
 
 .carousel-container {
     position: relative;
-    max-width: 600px;
+    max-width: 450px; /* Un poco más angosto para que la polaroid mantenga su proporción */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* El marco blanco estilo Fine Art / Impresión física */
+/* Quitamos el marco del contenedor, ahora será transparente */
 .carousel-track-container {
-    width: 80%; /* Deja espacio a los lados para las flechas */
+    width: 85%; 
     overflow: hidden;
-    border-radius: 8px;
-    background: #ffffff;
-    padding: 12px; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    padding: 20px 0; /* Espacio para que la sombra de la Polaroid no se corte al moverse */
 }
 
 .carousel-track {
     display: flex;
     list-style: none;
-    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición súper suave y elegante */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Deslizamiento súper suave */
     margin: 0;
     padding: 0;
 }
@@ -852,22 +848,41 @@ body {
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
+    padding: 0 15px; /* Separación entre cada foto */
 }
 
+/* ================= LA MAGIA POLAROID ================= */
 .carousel-image {
     width: 100%;
-    height: 380px; /* Ajusta la altura a tu gusto, 380px queda muy bien en móviles */
-    object-fit: cover; /* Evita que las fotos se deformen */
-    border-radius: 4px;
+    height: 350px; 
+    object-fit: cover; 
     display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Diseño del papel fotográfico */
+    background-color: #FDFCF8; /* Blanco muy sutilmente crema */
+    padding: 15px 15px 75px 15px; /* El secreto: Lados delgados, base muy ancha */
+    border-radius: 2px; /* Esquinas casi rectas como una foto real */
+    
+    /* Sombra profunda para que parezca una foto física sobre la mesa */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 5px 15px rgba(0,0,0,0.06); 
+    
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
 }
 
-/* Botones de control */
+/* Interacción: Al pasar el mouse o tocar, la foto se inclina levemente */
+.carousel-image:hover {
+    transform: scale(1.03) rotate(-2deg); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Botones de control (Flechas) */
 .carousel-btn {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--azul-tinta);
     padding: 10px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -877,20 +892,20 @@ body {
 }
 
 .carousel-btn:hover {
-    color: #C2A770; /* Dorado cálido al pasar el ratón */
+    color: #C2A770; /* Dorado al pasar el mouse */
     transform: scale(1.15);
     opacity: 1;
 }
 
-.prev-btn { left: 0; }
-.next-btn { right: 0; }
+.prev-btn { left: -10px; }
+.next-btn { right: -10px; }
 
-/* Indicadores (Puntitos minimalistas) */
+/* Indicadores (Puntitos de abajo) */
 .carousel-nav {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 30px;
+    margin-top: 10px; 
 }
 
 .carousel-indicator {
@@ -908,32 +923,21 @@ body {
 .carousel-indicator.current-indicator {
     background: var(--azul-tinta);
     opacity: 1;
-    transform: scale(1.2); /* Crece sutilmente el puntito activo */
+    transform: scale(1.2);
 }
-
-/* ================== EFECTOS DE LAS FOTOS DEL CARRUSEL ================== */
-.carousel-image {
-    cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
-    transition: transform 0.3s ease;
-}
-
-.carousel-image:hover {
-    transform: scale(1.02); /* Se acerca un poquito al pasar el mouse por encima */
-}
-
-/* ================== LIGHTBOX (VENTANA PARA AMPLIAR FOTO) ================== */
+/* ================== LIGHTBOX (VENTANA PARA AMPLIAR FOTO POLAROID) ================== */
 .image-lightbox {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
-    z-index: 100000; /* Por encima del menú y del sobre */
+    z-index: 100000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(11, 21, 40, 0.92); /* Azul oscuro de tu paleta, casi negro */
-    backdrop-filter: blur(5px); /* Efecto de cristal esmerilado en el fondo */
+    background-color: rgba(11, 21, 40, 0.92); 
+    backdrop-filter: blur(5px); 
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 
 .image-lightbox.show {
@@ -945,17 +949,24 @@ body {
 
 .lightbox-content {
     max-width: 90%;
-    max-height: 85vh; /* 85% del alto de la pantalla */
-    border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
-    object-fit: contain;
-    border: 2px solid var(--fondo-crema); /* Marco sutil al ampliar */
+    max-height: 80vh; /* Un poco más pequeña para dar espacio al borde */
+    box-sizing: border-box; /* Súper importante para que el borde se calcule bien */
+    object-fit: cover; /* Mantiene la foto sin huecos */
+    
+    /* EFECTO POLAROID GIGANTE */
+    background-color: #FDFCF8;
+    padding: 20px 20px 100px 20px; /* Bordes proporcionales, base muy gruesa */
+    border-radius: 4px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 10px 25px rgba(0,0,0,0.3);
+    
+    /* Inicia más pequeña y ligeramente inclinada */
+    transform: scale(0.8) rotate(-4deg);
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Al abrirse, se endereza mágicamente */
 .image-lightbox.show .lightbox-content {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
 }
 
 .lightbox-close {
@@ -968,13 +979,15 @@ body {
     cursor: pointer;
     font-family: sans-serif;
     z-index: 100001;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
     line-height: 1;
 }
 
 .lightbox-close:hover {
-    color: #C2A770; /* Se pone dorado al pasar el mouse */
+    color: #C2A770; 
+    transform: scale(1.1);
 }
+
 
 
 /* Footer */

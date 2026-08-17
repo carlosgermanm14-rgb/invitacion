@@ -1,55 +1,4 @@
-// ================== 1. BASE DE DATOS DE INVITADOS ==================
-// ================== BASE DE DATOS DE INVITADOS ==================
-const LISTA_INVITADOS = {
-    "lora": { 
-        familia: "Antonio Lora", 
-        integrantes: [
-            { nombre: "Antonio Lora", asiento: "Mesa 1 - Asiento A10" }
-        ],
-        ninos: 0,
-        adultos: 1
-    },
-    "obed": { 
-        familia: "Manuel Obed Inostroza Zepeda", 
-        integrantes: [
-            { nombre: "Obed Inostroza", asiento: "Mesa 1 - Asiento A10" },
-            { nombre: "Invitado +1", asiento: "Mesa 1 - Asiento A09" }
-        ],
-        ninos: 0,
-        adultos: 2
-    },
-    "paul": { 
-        familia: "Familia German Meza", 
-        integrantes: [
-            { nombre: "Annel Meza", asiento: "Mesa 2 - Asiento B1" },
-            { nombre: "Paul German", asiento: "Mesa 2 - Asiento B2" },
-            { nombre: "Gael German Meza", asiento: "Mesa 2 - Asiento B3" }
-        ],
-        ninos: 1,
-        adultos: 2
-    },
-    "padres-novio": { 
-        familia: "Familia German Millan", 
-        integrantes: [
-            { nombre: "Rosa Millan", asiento: "Mesa Honor - Asiento H1" },
-            { nombre: "Gregorio German", asiento: "Mesa Honor - Asiento H2" }
-        ],
-        ninos: 0,
-        adultos: 2
-    },
-    "padres-novia": {
-        familia: "Familia Lopez Ruiz",
-        integrantes: [
-            { nombre: "Luisa Ruiz", asiento: "Mesa Honor - Asiento H3" },
-            { nombre: "Manuel Lopez", asiento: "Mesa Honor - Asiento H4" },
-            { nombre: "Fernanda Lopez Ruiz", asiento: "Mesa Honor - Asiento H5" },
-            { nombre: "Invitado +1", asiento: "Mesa Honor - Asiento H6" }
-        ],
-        ninos: 0,
-        adultos: 4
-    }
-};
-
+import LISTA_INVITADOS from './invitados'
 
 // ================== 2. LÓGICA DEL PASE Y URL ==================
 document.addEventListener('DOMContentLoaded', function() {
@@ -79,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // =================NUEVO=================
         // MAGIA VIP PARA LOS PADRES
-        if (idInvitado === "padres-novio" || idInvitado === "padres-novia" || idInvitado === "paul") {
+        if (idInvitado === "padres-novio" || idInvitado === "padres-novia" || idInvitado === "german-meza" || idInvitado === "fernanda-lopez") {
             const tarjetaPase = document.getElementById('tarjeta-pase');
             const tituloPase = document.getElementById('titulo-pase');
             

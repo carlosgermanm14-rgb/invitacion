@@ -1,4 +1,4 @@
-import LISTA_INVITADOS from './invitados'
+import {LISTA_INVITADOS} from './invitados.js'
 
 // ================== 2. LÓGICA DEL PASE Y URL ==================
 document.addEventListener('DOMContentLoaded', function() {

@@ -1,5 +1,5 @@
 // ================== 1. BASE DE DATOS DE INVITADOS ==================
-const LISTA_INVITADOS = {
+export const LISTA_INVITADOS = {
     "lugo": {
         familia: "Familia Lugo",
         integrantes: [

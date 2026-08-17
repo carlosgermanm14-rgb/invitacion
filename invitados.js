@@ -3,8 +3,8 @@ export const LISTA_INVITADOS = {
     "lugo": {
         familia: "Familia Lugo",
         integrantes: [
-            { nombre: "Yareth Lugo", asiento: "Mesa 11 - Asiento 2" },
-            { nombre: "Acompañante", asiento: "Mesa 11 - Asiento 3" }
+            { nombre: "Yareth Lugo", asiento: "Mesa 11 - asiento 2" },
+            { nombre: "Acompañante", asiento: "Mesa 11 - asiento 3" }
         ],
         ninos: 0,
         adultos: 2
@@ -12,8 +12,8 @@ export const LISTA_INVITADOS = {
     "ojeda": {
         familia: "Familia Ojeda",
         integrantes: [
-            { nombre: "Jennifer Ojeda", asiento: "Mesa 11 - Asiento 4" },
-            { nombre: "Acompañante", asiento: "Mesa 11 - Asiento 5" }
+            { nombre: "Jennifer Ojeda", asiento: "Mesa 11 - asiento 4" },
+            { nombre: "Acompañante", asiento: "Mesa 11 - asiento 5" }
         ],
         ninos: 0,
         adultos: 2
@@ -21,8 +21,8 @@ export const LISTA_INVITADOS = {
     "siu": {
         familia: "Familia Siu",
         integrantes: [
-            { nombre: "Dr. Efren Siu", asiento: "Mesa 11 - Asiento 6" },
-            { nombre: "Acompañante", asiento: "Mesa 11 - Asiento 7" }
+            { nombre: "Dr. Efren Siu", asiento: "Mesa 11 - asiento 6" },
+            { nombre: "Acompañante", asiento: "Mesa 11 - asiento 7" }
         ],
         ninos: 0,
         adultos: 2
@@ -30,8 +30,8 @@ export const LISTA_INVITADOS = {
     "cervantes": {
         familia: "Familia Cervantes",
         integrantes: [
-            { nombre: "Ramiro Cervantes", asiento: "Mesa 1 - Asiento 1" },
-            { nombre: "Acompañante", asiento: "Mesa 1 - Asiento 2" }
+            { nombre: "Ramiro Cervantes", asiento: "Mesa 1 - asiento 1" },
+            { nombre: "Acompañante", asiento: "Mesa 1 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -39,8 +39,8 @@ export const LISTA_INVITADOS = {
     "gomez": {
         familia: "Familia Gomez",
         integrantes: [
-            { nombre: "Javier Gomez", asiento: "Mesa 1 - Asiento 3" },
-            { nombre: "Acompañante", asiento: "Mesa 1 - Asiento 4" }
+            { nombre: "Javier Gomez", asiento: "Mesa 1 - asiento 3" },
+            { nombre: "Acompañante", asiento: "Mesa 1 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
@@ -48,8 +48,8 @@ export const LISTA_INVITADOS = {
     "inostroza": {
         familia: "Familia Inostroza",
         integrantes: [
-            { nombre: "Obed Inostroza", asiento: "Mesa 1 - Asiento 5" },
-            { nombre: "Acompañante", asiento: "Mesa 1 - Asiento 6" }
+            { nombre: "Obed Inostroza", asiento: "Mesa 1 - asiento 5" },
+            { nombre: "Acompañante", asiento: "Mesa 1 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
@@ -57,8 +57,8 @@ export const LISTA_INVITADOS = {
     "sauceda": {
         familia: "Familia Suceda",
         integrantes: [
-            { nombre: "Gustavo Sauceda", asiento: "Mesa 1 - Asiento 7" },
-            { nombre: "Acompañante", asiento: "Mesa 1 - Asiento 8" }
+            { nombre: "Gustavo Sauceda", asiento: "Mesa 1 - asiento 7" },
+            { nombre: "Acompañante", asiento: "Mesa 1 - asiento 8" }
         ],
         ninos: 0,
         adultos: 2
@@ -66,8 +66,8 @@ export const LISTA_INVITADOS = {
     "campos": {
         familia: "Familia Campos",
         integrantes: [
-            { nombre: "Kenia Campos", asiento: "Mesa 1 - Asiento 9" },
-            { nombre: "Acompañante", asiento: "Mesa 1 - Asiento 10" }
+            { nombre: "Kenia Campos", asiento: "Mesa 1 - asiento 9" },
+            { nombre: "Acompañante", asiento: "Mesa 1 - asiento 10" }
         ],
         ninos: 0,
         adultos: 2
@@ -75,8 +75,8 @@ export const LISTA_INVITADOS = {
     "canedo": {
         familia: "Familia Cañedo",
         integrantes: [
-            { nombre: "Cañedo", asiento: "Mesa 2 - Asiento 1" },
-            { nombre: "Acompañante", asiento: "Mesa 2 - Asiento 2" }
+            { nombre: "Cañedo", asiento: "Mesa 2 - asiento 1" },
+            { nombre: "Acompañante", asiento: "Mesa 2 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -84,8 +84,8 @@ export const LISTA_INVITADOS = {
     "paez": {
         familia: "Familia Paez",
         integrantes: [
-            { nombre: "Ramon Paez", asiento: "Mesa 2 - Asiento 3" },
-            { nombre: "Acompañante", asiento: "Mesa 2 - Asiento 4" }
+            { nombre: "Ramon Paez", asiento: "Mesa 2 - asiento 3" },
+            { nombre: "Acompañante", asiento: "Mesa 2 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
@@ -93,9 +93,9 @@ export const LISTA_INVITADOS = {
     "german-meza": {
         familia: "Familia Germán Meza",
         integrantes: [
-            { nombre: "Paul Germán", asiento: "Mesa 2 - Asiento 5" },
-            { nombre: "Annel Meza", asiento: "Mesa 2 - Asiento 6" },
-            { nombre: "Gael Germán Meza", asiento: "Mesa 2 - Asiento 6" }
+            { nombre: "Paul Germán", asiento: "Mesa 2 - asiento 5" },
+            { nombre: "Annel Meza", asiento: "Mesa 2 - asiento 6" },
+            { nombre: "Gael Germán Meza", asiento: "Mesa 2 - asiento 6" }
         ],
         ninos: 1,
         adultos: 2
@@ -103,8 +103,8 @@ export const LISTA_INVITADOS = {
     "leal-ceja": {
         familia: "Familia Leal Ceja",
         integrantes: [
-            { nombre: "David Leal", asiento: "Mesa 2 - Asiento 7" },
-            { nombre: "Michelle Ceja", asiento: "Mesa 2 - Asiento 8" }
+            { nombre: "David Leal", asiento: "Mesa 2 - asiento 7" },
+            { nombre: "Michelle Ceja", asiento: "Mesa 2 - asiento 8" }
         ],
         ninos: 0,
         adultos: 2
@@ -112,8 +112,8 @@ export const LISTA_INVITADOS = {
     "padres-novio": {
         familia: "Familia Germán Millán",
         integrantes: [
-            { nombre: "Gregorio Germán", asiento: "Mesa 3 - Asiento 1" },
-            { nombre: "Rosa Maria Millán", asiento: "Mesa 3 - Asiento 2" }
+            { nombre: "Gregorio Germán", asiento: "Mesa 3 - asiento 1" },
+            { nombre: "Rosa Maria Millán", asiento: "Mesa 3 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -121,8 +121,8 @@ export const LISTA_INVITADOS = {
     "melgar": {
         familia: "Familia Melgar",
         integrantes: [
-            { nombre: "Guillermina Melgar", asiento: "Mesa 3 - Asiento 3" },
-            { nombre: "Acompañante", asiento: "Mesa 3 - Asiento 4" }
+            { nombre: "Guillermina Melgar", asiento: "Mesa 3 - asiento 3" },
+            { nombre: "Acompañante", asiento: "Mesa 3 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
@@ -130,17 +130,17 @@ export const LISTA_INVITADOS = {
     "german-aguilar": {
         familia: "Familia Germán Aguilar",
         integrantes: [
-            { nombre: "Maria Aguilar", asiento: "Mesa 3 - Asiento 5" },
-            { nombre: "Simon Germán", asiento: "Mesa 3 - Asiento 6" }
+            { nombre: "Maria Aguilar", asiento: "Mesa 3 - asiento 5" },
+            { nombre: "Simon Germán", asiento: "Mesa 3 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
     },
-    "teresita": {
-        familia: "Teresita",
+    "teresa-corona": {
+        familia: "Teresa de Jesus Corona",
         integrantes: [
-            { nombre: "Teresita", asiento: "Mesa 3 - Asiento 7" },
-            { nombre: "Acompañante", asiento: "Mesa 3 - Asiento 8" }
+            { nombre: "Teresita", asiento: "Mesa 3 - asiento 7" },
+            { nombre: "Acompañante", asiento: "Mesa 3 - asiento 8" }
         ],
         ninos: 0,
         adultos: 2
@@ -148,8 +148,8 @@ export const LISTA_INVITADOS = {
     "alma-lopez": {
         familia: "Familia Lopez",
         integrantes: [
-            { nombre: "Alma Lopez", asiento: "Mesa 3 - Asiento 9" },
-            { nombre: "Acompañante", asiento: "Mesa 3 - Asiento 10" }
+            { nombre: "Alma Lopez", asiento: "Mesa 3 - asiento 9" },
+            { nombre: "Acompañante", asiento: "Mesa 3 - asiento 10" }
         ],
         ninos: 0,
         adultos: 2
@@ -157,8 +157,8 @@ export const LISTA_INVITADOS = {
     "juliana-german": {
         familia: "Tia Juliana Germán",
         integrantes: [
-            { nombre: "Juliana Germán", asiento: "Mesa 4 - Asiento 1" },
-            { nombre: "Acompañante", asiento: "Mesa 4 - Asiento 2" }
+            { nombre: "Juliana Germán", asiento: "Mesa 4 - asiento 1" },
+            { nombre: "Acompañante", asiento: "Mesa 4 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -166,17 +166,17 @@ export const LISTA_INVITADOS = {
     "solano": {
         familia: "Familia Solano",
         integrantes: [
-            { nombre: "Carlos Solano", asiento: "Mesa 4 - Asiento 3" },
-            { nombre: "Acompañante", asiento: "Mesa 4 - Asiento 4" }
+            { nombre: "Carlos Solano", asiento: "Mesa 4 - asiento 3" },
+            { nombre: "Acompañante", asiento: "Mesa 4 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
     },
     "omar": {
-        familia: "Omar NP",
+        familia: "Omar Medina",
         integrantes: [
-            { nombre: "Omar", asiento: "Mesa 4 - Asiento 5" },
-            { nombre: "Acompañante", asiento: "Mesa 4 - Asiento 6" }
+            { nombre: "Omar Medina", asiento: "Mesa 4 - asiento 5" },
+            { nombre: "Acompañante", asiento: "Mesa 4 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
@@ -184,9 +184,9 @@ export const LISTA_INVITADOS = {
     "apodaca-atondo": {
         familia: "Familia Apodaca Atondo",
         integrantes: [
-            { nombre: "Jesus Apodaca", asiento: "Mesa 4 - Asiento 7" },
-            { nombre: "Beatriz Atondo", asiento: "Mesa 4 - Asiento 8" },
-            { nombre: "Fabiola Apodaca", asiento: "Mesa 4 - Asiento 9" }
+            { nombre: "Jesus Apodaca", asiento: "Mesa 4 - asiento 7" },
+            { nombre: "Beatriz Atondo", asiento: "Mesa 4 - asiento 8" },
+            { nombre: "Fabiola Apodaca", asiento: "Mesa 4 - asiento 9" }
         ],
         ninos: 0,
         adultos: 3
@@ -194,7 +194,7 @@ export const LISTA_INVITADOS = {
     "sosa": {
         familia: "Familia Sosa",
         integrantes: [
-            { nombre: "Isamar Sosa", asiento: "Mesa 5 - Asiento 1" }
+            { nombre: "Isamar Sosa", asiento: "Mesa 5 - asiento 1" }
         ],
         ninos: 0,
         adultos: 1
@@ -202,7 +202,7 @@ export const LISTA_INVITADOS = {
     "lora": {
         familia: "Familia Lora",
         integrantes: [
-            { nombre: "Antonio Lora", asiento: "Mesa 5 - Asiento 2" }
+            { nombre: "Antonio Lora", asiento: "Mesa 5 - asiento 2" }
         ],
         ninos: 0,
         adultos: 1
@@ -210,7 +210,7 @@ export const LISTA_INVITADOS = {
     "quintero": {
         familia: "Familia Quintero",
         integrantes: [
-            { nombre: "Ezequiel Quintero", asiento: "Mesa 5 - Asiento 3" }
+            { nombre: "Ezequiel Quintero", asiento: "Mesa 5 - asiento 3" }
         ],
         ninos: 0,
         adultos: 1
@@ -218,7 +218,7 @@ export const LISTA_INVITADOS = {
     "zuniga": {
         familia: "Familia Zuñiga",
         integrantes: [
-            { nombre: "Jesus Zuñiga", asiento: "Mesa 5 - Asiento 10" }
+            { nombre: "Jesus Zuñiga", asiento: "Mesa 5 - asiento 10" }
         ],
         ninos: 0,
         adultos: 1
@@ -226,8 +226,8 @@ export const LISTA_INVITADOS = {
     "gutierrez-mejia": {
         familia: "Familia Gutierrez Mejia",
         integrantes: [
-            { nombre: "Mauricio", asiento: "Mesa 5 - Asiento 8" },
-            { nombre: "Abby", asiento: "Mesa 5 - Asiento 9" }
+            { nombre: "Mauricio", asiento: "Mesa 5 - asiento 8" },
+            { nombre: "Abby", asiento: "Mesa 3 - asiento 9" }
         ],
         ninos: 0,
         adultos: 2
@@ -235,19 +235,19 @@ export const LISTA_INVITADOS = {
     "rodriguez-gonzalez": {
         familia: "Familia Rodriguez Gonzalez",
         integrantes: [
-            { nombre: "Laura Rodriguez", asiento: "Mesa 6 - Asiento 1" },
-            { nombre: "Acompañante 1", asiento: "Mesa 6 - Asiento 2" },
-            { nombre: "Acompañante 2", asiento: "Mesa 6 - Asiento 3" },
-            { nombre: "Acompañante 3", asiento: "Mesa 6 - Asiento 4" }
+            { nombre: "Laura Rodriguez", asiento: "Mesa 6 - asiento 1" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 2" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 3" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 4" }
         ],
         ninos: 0,
         adultos: 4
     },
-    "ramses-gonzalez": {
+    "gonzalez": {
         familia: "Gonzalez",
         integrantes: [
-            { nombre: "Ramses Gonzalez", asiento: "Mesa 6 - Asiento 5" },
-            { nombre: "Acompañante", asiento: "Mesa 6 - Asiento 6" }
+            { nombre: "Ramses Gonzalez", asiento: "Mesa 6 - asiento 5" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
@@ -255,10 +255,10 @@ export const LISTA_INVITADOS = {
     "rivera-rendon": {
         familia: "Familia Rivera Rendon",
         integrantes: [
-            { nombre: "Alexia Rivera", asiento: "Mesa 6 - Asiento 7" },
-            { nombre: "Acompañante 1", asiento: "Mesa 6 - Asiento 8" },
-            { nombre: "Acompañante 2", asiento: "Mesa 6 - Asiento 9" },
-            { nombre: "Acompañante 3", asiento: "Mesa 6 - Asiento 10" }
+            { nombre: "Alexia Rivera", asiento: "Mesa 6 - asiento 7" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 8" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 9" },
+            { nombre: "Acompañante", asiento: "Mesa 6 - asiento 10" }
         ],
         ninos: 0,
         adultos: 4
@@ -266,28 +266,19 @@ export const LISTA_INVITADOS = {
     "millan-rodriguez": {
         familia: "Familia Millán Rodriguez",
         integrantes: [
-            { nombre: "Daniel Millán", asiento: "Mesa 7 - Asiento 1" },
-            { nombre: "Mirtha Rodriguez", asiento: "Mesa 7 - Asiento 2" },
-            { nombre: "Karely Millán", asiento: "Mesa 7 - Asiento 3" }
+            { nombre: "Daniel Millán", asiento: "Mesa 7 - asiento 1" },
+            { nombre: "Mirtha Rodriguez", asiento: "Mesa 7 - asiento 2" },
+            { nombre: "Karely Millán", asiento: "Mesa 7 - asiento 3" }
         ],
         ninos: 0,
         adultos: 3
     },
-    "reyes-millan-1": {
+    "millan-ramirez": {
         familia: "Familia Millán Ramirez",
         integrantes: [
-            { nombre: "Reyes Millán", asiento: "Mesa 7 - Asiento 4" },
-            { nombre: "Acompañante", asiento: "Mesa 7 - Asiento 5" }
-        ],
-        ninos: 0,
-        adultos: 2
-    },
-    "reyes-millan-2": {
-        familia: "Familia Millán Ramirez",
-        integrantes: [
-            { nombre: "Reyes Millán", asiento: "Mesa 7 - Asiento 6" },
-            { nombre: "Acompañante 1", asiento: "Mesa 7 - Asiento 7" },
-            { nombre: "Acompañante 2", asiento: "Mesa 7 - Asiento 8" }
+            { nombre: "Reyes Millán", asiento: "Mesa 7 - asiento 4" },
+            { nombre: "Acompañante", asiento: "Mesa 7 - asiento 5" },
+            { nombre: "Acompañante", asiento: "Mesa 7 - asiento 6" }
         ],
         ninos: 0,
         adultos: 3
@@ -295,18 +286,27 @@ export const LISTA_INVITADOS = {
     "millan-esparza": {
         familia: "Familia Millán Esparza",
         integrantes: [
-            { nombre: "Daniel Millán", asiento: "Mesa 7 - Asiento 9" },
-            { nombre: "Jakelin Esparza", asiento: "Mesa 7 - Asiento 10" },
+            { nombre: "Daniel Millán", asiento: "Mesa 7 - asiento 7" },
+            { nombre: "Jakelin Esparza", asiento: "Mesa 7 - asiento 8" },
             { nombre: "Daniela Millán Esparza", asiento: "Mesa 16" }
         ],
         ninos: 1,
         adultos: 2
     },
+    "millan-valdez": {
+        familia: "Familia Millán Valdez",
+        integrantes: [
+            { nombre: "Adelina Millán", asiento: "Mesa 7 - asiento 9" },
+            { nombre: "Guadalupe Valdez", asiento: "Mesa 7 - asiento 10" }
+        ],
+        ninos: 0,
+        adultos: 2
+    },
     "martinez-millan": {
         familia: "Familia Martinez Millán",
         integrantes: [
-            { nombre: "Martina Millán", asiento: "Mesa 8 - Asiento 1" },
-            { nombre: "Antonio Martinez", asiento: "Mesa 8 - Asiento 2" }
+            { nombre: "Martina Millán", asiento: "Mesa 8 - asiento 1" },
+            { nombre: "Antonio Martinez", asiento: "Mesa 8 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -314,56 +314,65 @@ export const LISTA_INVITADOS = {
     "karla-millan": {
         familia: "Familia Millán",
         integrantes: [
-            { nombre: "Karla Millán", asiento: "Mesa 8 - Asiento 4" },
-            { nombre: "Kelly Martinez", asiento: "Mesa 8 - Asiento 5" }
+            { nombre: "Karla Millán", asiento: "Mesa 8 - asiento 3" },
+            { nombre: "Kelly Martinez", asiento: "Mesa 8 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
     },
-    "arauz-martinez": {
-        familia: "Familia Arauz Martinez",
+    "dessire-millan": {
+        familia: "Dessiré Millán",
         integrantes: [
-            { nombre: "Karla Martinez", asiento: "Mesa 8 - Asiento 6" },
-            { nombre: "Kelly Arauz", asiento: "Mesa 8 - Asiento 7" }
+            { nombre: "Dessiré Millán", asiento: "Mesa 8 - asiento 5" },
+            { nombre: "Kelly Arauz", asiento: "Mesa 8 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
     },
-    "antonio-martinez": {
+    "martinez": {
         familia: "Familia Martinez",
         integrantes: [
-            { nombre: "Antonio Martinez", asiento: "Mesa 8 - Asiento 8" },
-            { nombre: "Roxana Payan", asiento: "Mesa 8 - Asiento 9" },
-            { nombre: "Jazmin", asiento: "Mesa 8 - Asiento 10" },
+            { nombre: "Antonio Martinez", asiento: "Mesa 8 - asiento 7" },
+            { nombre: "Roxana Payan", asiento: "Mesa 8 - asiento 8" },
+            { nombre: "Jazmin", asiento: "Mesa 8 - asiento 9" },
             { nombre: "Regina", asiento: "Mesa 16" }
         ],
         ninos: 1,
         adultos: 3
     },
+    "maria-martinez": {
+        familia: "Prima Maria Martinez",
+        integrantes: [
+            { nombre: "Maria Martinez", asiento: "Mesa 8 - asiento 10" },
+            { nombre: "Gisela", asiento: "Mesa 16" }
+        ],
+        ninos: 0,
+        adultos: 2
+    },
     "gil": {
         familia: "Familia Gil",
         integrantes: [
-            { nombre: "Amy Gil", asiento: "Mesa 10 - Asiento 1" },
-            { nombre: "Salma", asiento: "Mesa 10 - Asiento 2" }
+            { nombre: "Amy Gil", asiento: "Mesa 10 - asiento 1" },
+            { nombre: "Salma", asiento: "Mesa 10 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
     },
     "jesus-millan": {
-        familia: "Familia Millán",
+        familia: "Familia illán",
         integrantes: [
-            { nombre: "Jesus Millán", asiento: "Mesa 9 - Asiento 1" },
-            { nombre: "Angel", asiento: "Mesa 9 - Asiento 2" },
-            { nombre: "Guadalupe", asiento: "Mesa 9 - Asiento 3" }
+            { nombre: "Jesus Millán", asiento: "Mesa 9 - asiento 1" },
+            { nombre: "Angel", asiento: "Mesa 9 - asiento 2" },
+            { nombre: "Guadalupe", asiento: "Mesa 9 - asiento 3" }
         ],
         ninos: 0,
         adultos: 3
     },
-    "reyes-millan-3": {
+    "reyes-millan": {
         familia: "Familia Reyes Millán",
         integrantes: [
-            { nombre: "Veronica Reyes", asiento: "Mesa 9 - Asiento 4" },
-            { nombre: "Patricio", asiento: "Mesa 9 - Asiento 5" },
+            { nombre: "Veronica Reyes", asiento: "Mesa 9 - asiento 4" },
+            { nombre: "Patricio", asiento: "Mesa 9 - asiento 5" },
             { nombre: "Lyah", asiento: "Mesa 16" },
             { nombre: "Acompañante", asiento: "Mesa 16" }
         ],
@@ -373,8 +382,8 @@ export const LISTA_INVITADOS = {
     "ojeda-millan": {
         familia: "Familia Ojeda Millán",
         integrantes: [
-            { nombre: "Daniela Millán", asiento: "Mesa 9 - Asiento 6" },
-            { nombre: "Hernaldo Ojeda", asiento: "Mesa 10 - Asiento 7" }
+            { nombre: "Daniela Millán", asiento: "Mesa 9 - asiento 6" },
+            { nombre: "Hernaldo Ojeda", asiento: "Mesa 10 - asiento 7" }
         ],
         ninos: 0,
         adultos: 2
@@ -382,8 +391,8 @@ export const LISTA_INVITADOS = {
     "millan-flores": {
         familia: "Familia Millán Flores",
         integrantes: [
-            { nombre: "Brenda Millán", asiento: "Mesa 9 - Asiento 8" },
-            { nombre: "Luis", asiento: "Mesa 9 - Asiento 9" }
+            { nombre: "Brenda Millán", asiento: "Mesa 9 - asiento 8" },
+            { nombre: "Luis", asiento: "Mesa 9 - asiento 9" }
         ],
         ninos: 0,
         adultos: 2
@@ -391,9 +400,9 @@ export const LISTA_INVITADOS = {
     "castro": {
         familia: "Familia Castro",
         integrantes: [
-            { nombre: "Pamela Castro", asiento: "Mesa 10 - Asiento 3" },
-            { nombre: "Uriel", asiento: "Mesa 10 - Asiento 4" },
-            { nombre: "Uriel Jr.", asiento: "Mesa 16" }
+            { nombre: "Pamela Castro", asiento: "Mesa 10 - asiento 3" },
+            { nombre: "Uriel", asiento: "Mesa 10 - asiento 4" },
+            { nombre: "Uriel", asiento: "Mesa 16" }
         ],
         ninos: 1,
         adultos: 2
@@ -401,8 +410,8 @@ export const LISTA_INVITADOS = {
     "estrada": {
         familia: "Familia Estrada",
         integrantes: [
-            { nombre: "Elizabeth Estrada", asiento: "Mesa 10 - Asiento 5" },
-            { nombre: "Acompañante", asiento: "Mesa 10 - Asiento 6" }
+            { nombre: "Elizabeth Estrada", asiento: "Mesa 10 - asiento 5" },
+            { nombre: "Acompañante", asiento: "Mesa 10 - asiento 6" }
         ],
         ninos: 0,
         adultos: 2
@@ -410,8 +419,8 @@ export const LISTA_INVITADOS = {
     "nava-german": {
         familia: "Familia Nava Germán",
         integrantes: [
-            { nombre: "Stephanie Nava", asiento: "Mesa 10 - Asiento 7" },
-            { nombre: "Acompañante", asiento: "Mesa 10 - Asiento 8" }
+            { nombre: "Stephanie Nava", asiento: "Mesa 10 - asiento 7" },
+            { nombre: "Acompañante", asiento: "Mesa 10 - asiento 8" }
         ],
         ninos: 0,
         adultos: 2
@@ -419,17 +428,17 @@ export const LISTA_INVITADOS = {
     "rivas": {
         familia: "Familia Rivas",
         integrantes: [
-            { nombre: "Yessica Rivas", asiento: "Mesa 10 - Asiento 9" },
-            { nombre: "Acompañante", asiento: "Mesa 10 - Asiento 10" }
+            { nombre: "Yessica Rivas", asiento: "Mesa 10 - asiento 9" },
+            { nombre: "Acompañante", asiento: "Mesa 10 - asiento 10" }
         ],
         ninos: 0,
         adultos: 2
     },
-    "irene-ruiz": {
+    "ruiz": {
         familia: "Familia Ruiz",
         integrantes: [
-            { nombre: "Irene Ruiz", asiento: "Mesa 12 - Asiento 1" },
-            { nombre: "Ana Elisa", asiento: "Mesa 12 - Asiento 2" },
+            { nombre: "Irene Ruiz", asiento: "Mesa 12 - asiento 1" },
+            { nombre: "Ana Elisa", asiento: "Mesa 12 - asiento 2" },
             { nombre: "Victoria", asiento: "Mesa 16" }
         ],
         ninos: 1,
@@ -438,8 +447,8 @@ export const LISTA_INVITADOS = {
     "gritti-ruiz": {
         familia: "Familia Gritti Ruiz",
         integrantes: [
-            { nombre: "Esmeralda Ruiz", asiento: "Mesa 12 - Asiento 5" },
-            { nombre: "Samuel Gritti", asiento: "Mesa 12 - Asiento 6" },
+            { nombre: "Esmeralda Ruiz", asiento: "Mesa 12 - asiento 5" },
+            { nombre: "Samuel Gritti", asiento: "Mesa 12 - asiento 6" },
             { nombre: "Thiago Gritti Ruiz", asiento: "Mesa 12" }
         ],
         ninos: 1,
@@ -448,19 +457,19 @@ export const LISTA_INVITADOS = {
     "valenzuela-ruiz": {
         familia: "Familia Valenzuela Ruiz",
         integrantes: [
-            { nombre: "Ana Luisa Ruiz", asiento: "Mesa 12 - Asiento 9" },
-            { nombre: "Fernando Valenzuela", asiento: "Mesa 12 - Asiento 10" },
+            { nombre: "Ana Luisa Ruiz", asiento: "Mesa 12 - asiento 9" },
+            { nombre: "Fernando Valenzuela", asiento: "Mesa 12 - asiento 10" },
             { nombre: "Fernando Valenzuela Ruiz", asiento: "Mesa 16" }
         ],
         ninos: 1,
         adultos: 2
     },
-    "tomas-medina": {
+    "medina": {
         familia: "Familia Medina",
         integrantes: [
-            { nombre: "Tomas Medina", asiento: "Mesa 13 - Asiento 3" },
-            { nombre: "Viridiana", asiento: "Mesa 13 - Asiento 4" },
-            { nombre: "Tomas Medina Jr.", asiento: "Mesa 13 - Asiento 5" }
+            { nombre: "Tomas Medina", asiento: "Mesa 13 - asiento 3" },
+            { nombre: "Viridiana", asiento: "Mesa 13 - asiento 4" },
+            { nombre: "Tomas Medina", asiento: "Mesa 13 - asiento 5" }
         ],
         ninos: 0,
         adultos: 3
@@ -468,11 +477,11 @@ export const LISTA_INVITADOS = {
     "sanchez-medina": {
         familia: "Familia Sanchez Medina",
         integrantes: [
-            { nombre: "Maricruz Medina", asiento: "Mesa 13 - Asiento 6" },
-            { nombre: "Hilario Sanchez", asiento: "Mesa 13 - Asiento 7" },
+            { nombre: "Maricruz Medina", asiento: "Mesa 13 - asiento 6" },
+            { nombre: "Hilario Sanchez", asiento: "Mesa 13 - asiento 7" },
             { nombre: "Jose Hilario Sanchez", asiento: "Mesa 13" },
             { nombre: "Valentina Sanchez", asiento: "Mesa 16" },
-            { nombre: "Luis Sanchez", asiento: "Mesa 13 - Asiento 8" }
+            { nombre: "Luis Sanchez", asiento: "Mesa 13 - asiento 8" }
         ],
         ninos: 2,
         adultos: 3
@@ -480,8 +489,8 @@ export const LISTA_INVITADOS = {
     "moreno-medina": {
         familia: "Familia Moreno Medina",
         integrantes: [
-            { nombre: "Imelda Medina", asiento: "Mesa 13 - Asiento 9" },
-            { nombre: "Luisa Camila Moreno", asiento: "Mesa 13 - Asiento 10" }
+            { nombre: "Imelda Medina", asiento: "Mesa 13 - asiento 9" },
+            { nombre: "Luisa Camila Moreno", asiento: "Mesa 13 - asiento 10" }
         ],
         ninos: 0,
         adultos: 2
@@ -489,8 +498,8 @@ export const LISTA_INVITADOS = {
     "fernanda-lopez": {
         familia: "Familia Lopez Ruiz",
         integrantes: [
-            { nombre: "Fernanda Lopez", asiento: "Mesa 13 - Asiento 1" },
-            { nombre: "Acompañante", asiento: "Mesa 13 - Asiento 2" }
+            { nombre: "Fernanda Lopez", asiento: "Mesa 13 - asiento 1" },
+            { nombre: "Acompañante", asiento: "Mesa 13 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -498,8 +507,8 @@ export const LISTA_INVITADOS = {
     "padres-novia": {
         familia: "Familia Lopez Ruiz",
         integrantes: [
-            { nombre: "Maria Luisa Ruiz", asiento: "Mesa 14 - Asiento 1" },
-            { nombre: "Juan Manuel Lopez", asiento: "Mesa 14 - Asiento 2" }
+            { nombre: "Maria Luisa Ruiz", asiento: "Mesa 14 - asiento 1" },
+            { nombre: "Juan Manuel Lopez", asiento: "Mesa 14 - asiento 2" }
         ],
         ninos: 0,
         adultos: 2
@@ -507,8 +516,8 @@ export const LISTA_INVITADOS = {
     "ruiz-samano": {
         familia: "Familia Ruiz Samano",
         integrantes: [
-            { nombre: "Rito Ruiz", asiento: "Mesa 14 - Asiento 3" },
-            { nombre: "Olga Samano", asiento: "Mesa 14 - Asiento 4" }
+            { nombre: "Rito Ruiz", asiento: "Mesa 14 - asiento 3" },
+            { nombre: "Olga Samano", asiento: "Mesa 14 - asiento 4" }
         ],
         ninos: 0,
         adultos: 2
@@ -516,9 +525,9 @@ export const LISTA_INVITADOS = {
     "ruiz-sanchez": {
         familia: "Familia Ruiz Sanchez",
         integrantes: [
-            { nombre: "Rosario Sanchez", asiento: "Mesa 14 - Asiento 5" },
-            { nombre: "Alberto Ruiz", asiento: "Mesa 14 - Asiento 6" },
-            { nombre: "Karina Ruiz", asiento: "Mesa 12 - Asiento 7" }
+            { nombre: "Rosario Sanchez", asiento: "Mesa 14 - asiento 5" },
+            { nombre: "Alberto Ruiz", asiento: "Mesa 14 - asiento 6" },
+            { nombre: "Karina Ruiz", asiento: "Mesa 12 - asiento 7" }
         ],
         ninos: 0,
         adultos: 3
@@ -526,10 +535,10 @@ export const LISTA_INVITADOS = {
     "barron-sanchez": {
         familia: "Familia Barrón Sanchez",
         integrantes: [
-            { nombre: "Angelica Sanchez", asiento: "Mesa 14 - Asiento 7" },
-            { nombre: "Cesar Barrón", asiento: "Mesa 14 - Asiento 8" },
-            { nombre: "Cesar Omar Barrón", asiento: "Mesa 12 - Asiento 3" },
-            { nombre: "Misael Barrón", asiento: "Mesa 12 - Asiento 4" }
+            { nombre: "Angelica Sanchez", asiento: "Mesa 14 - asiento 7" },
+            { nombre: "Cesar Barrón", asiento: "Mesa 14 - asiento 8" },
+            { nombre: "Cesar Omar Barrón", asiento: "Mesa 12 - asiento 3" },
+            { nombre: "Misael Barrón", asiento: "Mesa 12 - asiento 4" }
         ],
         ninos: 0,
         adultos: 4
@@ -537,68 +546,49 @@ export const LISTA_INVITADOS = {
     "medina-ruiz": {
         familia: "Familia Medina Ruiz",
         integrantes: [
-            { nombre: "Tomas Medina", asiento: "Mesa 14 - Asiento 9" },
-            { nombre: "Silvia Ruiz", asiento: "Mesa 14 - Asiento 10" }
+            { nombre: "Tomas Medina", asiento: "Mesa 14 - asiento 9" },
+            { nombre: "Silvia Ruiz", asiento: "Mesa 14 - asiento 10" }
         ],
         ninos: 0,
         adultos: 2
     },
     "maria-lopez": {
-        familia: "Tia Maria Lopez Rubio",
+        familia: "Maria Lopez Rubio",
         integrantes: [
-            { nombre: "Maria Lopez", asiento: "Mesa 15 - Asiento 1" },
-            { nombre: "Martin", asiento: "Mesa 15 - Asiento 2" },
-            { nombre: "Martin Jr.", asiento: "Mesa 15 - Asiento 3" }
+            { nombre: "Maria Lopez", asiento: "Mesa 15 - asiento 1" },
+            { nombre: "Martin", asiento: "Mesa 15 - asiento 2" },
+            { nombre: "Martin", asiento: "Mesa 15 - asiento 3" }
         ],
         ninos: 0,
         adultos: 2
     },
     "teresa-lopez": {
-        familia: "Tia Teresa Lopez Rubio",
+        familia: "Teresa Lopez Rubio",
         integrantes: [
-            { nombre: "Teresa Lopez Rubio", asiento: "Mesa 15 - Asiento 4" },
-            { nombre: "Acompañante", asiento: "Mesa 15 - Asiento 5" },
+            { nombre: "Teresa Lopez Rubio", asiento: "Mesa 15 - asiento 4" },
+            { nombre: "Acompañante", asiento: "Mesa 15 - asiento 5" },
             { nombre: "Iker", asiento: "Mesa 16" },
-            { nombre: "Juan Miguel", asiento: "Mesa 15 - Asiento 6" }
+            { nombre: "Juan Miguel", asiento: "Mesa 15 - asiento 6" }
         ],
         ninos: 1,
         adultos: 3
     },
     "margarita": {
-        familia: "Tia Margarita",
+        familia: "Margarita",
         integrantes: [
-            { nombre: "Maggi", asiento: "Mesa 15 - Asiento 7" },
-            { nombre: "Acompañante", asiento: "Mesa 15 - Asiento 8" }
+            { nombre: "Maggi", asiento: "Mesa 15 - asiento 7" },
+            { nombre: "Acompañante", asiento: "Mesa 15 - asiento 8" }
         ],
         ninos: 0,
         adultos: 2
     },
-    "perfecta-rubio": {
+    "lopez-rubio": {
         familia: "Familia Lopez Rubio",
         integrantes: [
-            { nombre: "Perfecta Rubio", asiento: "Mesa 15 - Asiento 9" },
-            { nombre: "Juan Lopez", asiento: "Mesa 15 - Asiento 10" }
+            { nombre: "Perfecta Rubio", asiento: "Mesa 15 - asiento 9" },
+            { nombre: "Juan Lopez", asiento: "Mesa 15 - asiento 10" }
         ],
         ninos: 0,
-        adultos: 2
-    },
-    "jesus-lopez": {
-        familia: "Familia Lopez",
-        integrantes: [
-            { nombre: "Jesus Lopez", asiento: "Mesa 5 - Asiento 4" },
-            { nombre: "Acompañante", asiento: "Mesa 5 - Asiento 5" }
-        ],
-        ninos: 0,
-        adultos: 2
-    },
-    "noel-lopez": {
-        familia: "Familia Lopez",
-        integrantes: [
-            { nombre: "Noel Lopez", asiento: "Mesa 5 - Asiento 6" },
-            { nombre: "Acompañante 1", asiento: "Mesa 5 - Asiento 7" },
-            { nombre: "Acompañante 2", asiento: "Mesa 5 - Asiento 7" }
-        ],
-        ninos: 1,
         adultos: 2
     }
 };

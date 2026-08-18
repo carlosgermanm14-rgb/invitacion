@@ -323,11 +323,28 @@ export const LISTA_INVITADOS = {
     "dessire-millan": {
         familia: "Dessiré Millán",
         integrantes: [
-            { nombre: "Dessiré Millán", asiento: "Mesa 8 - asiento 5" },
-            { nombre: "Kelly Arauz", asiento: "Mesa 8 - asiento 6" }
+            { nombre: "Dessiré Millán", asiento: "Mesa 11 - asiento 8" },
+            { nombre: "Acompañante +1", asiento: "Mesa 11 - asiento 9" }
         ],
         ninos: 0,
         adultos: 2
+    },
+    "carlos-millan": {
+        familia: "Tio Carlos Millan",
+        integrantes: [
+            { nombre: "Carlos Millán", asiento: "Mesa 8 - asiento 5" },
+            { nombre: "Acompañante +1", asiento: "Mesa 8 - asiento 6" }
+        ],
+        ninos: 0,
+        adultos: 2
+    },
+    "jesus-lopezrubio": {
+        familia: "Tio Jesus Lopez Rubio",
+        integrantes: [
+            { nombre: "Jesus Lopez", asiento: "Mesa 12 - asiento 8" }
+        ],
+        ninos: 0,
+        adultos: 1
     },
     "martinez": {
         familia: "Familia Martinez",
@@ -590,5 +607,6 @@ export const LISTA_INVITADOS = {
         ],
         ninos: 0,
         adultos: 2
-    }
+    },
+
 };

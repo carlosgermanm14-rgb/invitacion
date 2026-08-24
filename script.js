@@ -69,6 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 listDiv.appendChild(label);
             });
         }
+    }else {
+        // SI NO VIENE ID O NO EXISTE: Ocultar las 3 secciones
+        if (seccionPase) seccionPase.style.display = 'none';
+        if (seccionPlaylist) seccionPlaylist.style.display = 'none';
+        if (seccionRsvp) seccionRsvp.style.display = 'none';
     }
 });
 

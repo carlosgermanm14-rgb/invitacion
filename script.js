@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }else {
+        const seccionPase = document.getElementById('seccion-pase');
+        const seccionPlaylist = document.getElementById('seccion-music');
+        const seccionRsvp = document.getElementById('seccion-rsvp');
         // SI NO VIENE ID O NO EXISTE: Ocultar las 3 secciones
         if (seccionPase) seccionPase.style.display = 'none';
         if (seccionPlaylist) seccionPlaylist.style.display = 'none';
